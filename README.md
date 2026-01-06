@@ -21,43 +21,40 @@ Analyse de l'impact du temps d'écran sur la santé des enfants - Une étude dat
 
 ## 🏗️ Structure du Projet
 
-text
 Kids-Screen-Time-Analysis/
 │
 ├── data/
-│   ├── screen_time_children.csv     # Données brutes originales
-│   └── screen_time_clean.csv        # Données nettoyées et préparées
+│ ├── screen_time_children.csv # Données brutes originales
+│ └── screen_time_clean.csv # Données nettoyées et préparées
 │
-├── scripts/                         # Scripts R modulaires
-│   ├── 01_load_explore.R            # Chargement et exploration initiale
-│   ├── 02_nettoyage.R               # Nettoyage et préparation des données
-│   ├── 03_descriptive_stats.R       # Statistiques descriptives globales
-│   ├── 04_analysis.R                # Analyses avancées et tests statistiques
-│   ├── 05_visualizations.R          # Génération de graphiques
-│   └── tableau_bord.R               # Tableau de bord interactif
+├── scripts/ # Scripts R modulaires
+│ ├── 01_load_explore.R # Chargement et exploration initiale
+│ ├── 02_nettoyage.R # Nettoyage et préparation des données
+│ ├── 03_descriptive_stats.R # Statistiques descriptives globales
+│ ├── 04_analysis.R # Analyses avancées et tests statistiques
+│ ├── 05_visualizations.R # Génération de graphiques
+│ └── tableau_bord.R # Tableau de bord interactif
 │
-├── slides/                          # Présentation Quarto
-│   ├── presentation.qmd             # Slides principales
-│   ├── presentation.html            # Version HTML compilée
-│   └── presentation_files/          # Assets de la présentation
+├── slides/ # Présentation Quarto
+│ ├── presentation.qmd # Slides principales
+│ ├── presentation.html # Version HTML compilée
+│ └── presentation_files/ # Assets de la présentation
 │
-├── outputs/                         # Résultats exportés
-│   └── plots/                       # Visualisations sauvegardées
-│       ├── 01_screen_time_distribution.png
-│       ├── 02_screen_time_by_age.png
-│       ├── 03_exceeded_limit.png
-│       ├── 04_screen_time_by_device.png
-│       ├── 05_health_impact_by_screen_time.png
-│       ├── 06_education_level_protective.png
-│       ├── 07_health_problems_top.png
-│       └── 08_risk_profiles.png
+├── outputs/ # Résultats exportés
+│ └── plots/ # Visualisations sauvegardées
+│ ├── 01_screen_time_distribution.png
+│ ├── 02_screen_time_by_age.png
+│ ├── 03_exceeded_limit.png
+│ ├── 04_screen_time_by_device.png
+│ ├── 05_health_impact_by_screen_time.png
+│ ├── 06_education_level_protective.png
+│ ├── 07_health_problems_top.png
+│ └── 08_risk_profiles.png
 │
-├── _quarto.yml                      # Configuration Quarto
-├── .gitignore                       # Fichiers ignorés par Git
-├── README.md                        # Documentation du projet
-└── extensions/                      # Extensions Quarto
-
-
+├── _quarto.yml # Configuration Quarto
+├── .gitignore # Fichiers ignorés par Git
+├── README.md # Documentation du projet
+└── extensions/ # Extensions Quarto
 ---
 
 ## 🔍 Méthodologie d'Analyse
