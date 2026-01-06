@@ -285,5 +285,180 @@
     "title": "Analyse du Temps d’Écran chez les Enfants",
     "section": "3.1 Comparaison par genre",
     "text": "3.1 Comparaison par genre\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "slides/presentation.html#introduction",
+    "href": "slides/presentation.html#introduction",
+    "title": "Analyse du Temps d’Écran chez les Enfants",
+    "section": "Introduction",
+    "text": "Introduction\nContexte : L’usage des technologies numériques transforme profondément le quotidien des enfants, surtout dans les pays émergents. L’accès aux smartphones, tablettes et téléviseurs s’est fortement démocratisé ces 10 dernières années.\nEnjeux : Cette transition soulève des préoccupations de santé publique, notamment chez les enfants et adolescents, population particulièrement vulnérable aux effets d’une exposition prolongée aux écrans."
+  },
+  {
+    "objectID": "slides/presentation.html#étude-et-objectifs",
+    "href": "slides/presentation.html#étude-et-objectifs",
+    "title": "Analyse du Temps d’Écran chez les Enfants",
+    "section": "🎯 Étude et Objectifs",
+    "text": "🎯 Étude et Objectifs\n\nÉchantillon : 9,668 enfants indiens (8-18 ans)\nVariables clés :\n\n⏰ Temps d’écran quotidien\n📱 Type d’appareil utilisé\n🏥 Indicateurs de santé physique et comportementale\n\nObjectif : Fournir une analyse fondée sur les données pour éclairer :\n\n👨‍👩‍👧 Décisions parentales\n🎓 Stratégies éducatives\n🏛️ Politiques de santé publique"
+  },
+  {
+    "objectID": "slides/presentation.html#problématique",
+    "href": "slides/presentation.html#problématique",
+    "title": "Analyse du Temps d’Écran chez les Enfants",
+    "section": "❓ Problématique",
+    "text": "❓ Problématique\n\nDans quelle mesure l’utilisation des écrans influence-t-elle la santé des enfants, et quels facteurs peuvent moduler ces effets ?\n\nQuestions de recherche :\n\nCombien de temps les enfants passent-ils sur les écrans ?\nQuels appareils sont les plus utilisés ?\nQuelles conséquences pour la santé ?\nExiste-t-il des facteurs de protection ?\nComment les recommandations varient-elles par groupe d’âge ?"
+  },
+  {
+    "objectID": "slides/presentation.html#chargement-et-structure-des-données",
+    "href": "slides/presentation.html#chargement-et-structure-des-données",
+    "title": "Analyse du Temps d’Écran chez les Enfants",
+    "section": "Chargement et Structure des Données",
+    "text": "Chargement et Structure des Données\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "slides/presentation.html#statistiques-descriptives-globales",
+    "href": "slides/presentation.html#statistiques-descriptives-globales",
+    "title": "Analyse du Temps d’Écran chez les Enfants",
+    "section": "📈 Statistiques Descriptives Globales",
+    "text": "📈 Statistiques Descriptives Globales\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "slides/presentation.html#distribution-par-groupe-dâge",
+    "href": "slides/presentation.html#distribution-par-groupe-dâge",
+    "title": "Analyse du Temps d’Écran chez les Enfants",
+    "section": "1.1 Distribution par Groupe d’Âge",
+    "text": "1.1 Distribution par Groupe d’Âge\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "slides/presentation.html#conformité-aux-limites-recommandées",
+    "href": "slides/presentation.html#conformité-aux-limites-recommandées",
+    "title": "Analyse du Temps d’Écran chez les Enfants",
+    "section": "1.2 Conformité aux Limites Recommandées",
+    "text": "1.2 Conformité aux Limites Recommandées\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "slides/presentation.html#distribution-des-appareils-principaux",
+    "href": "slides/presentation.html#distribution-des-appareils-principaux",
+    "title": "Analyse du Temps d’Écran chez les Enfants",
+    "section": "1.3 Distribution des Appareils Principaux",
+    "text": "1.3 Distribution des Appareils Principaux\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "slides/presentation.html#temps-décran-vs-impacts-santé---tableau",
+    "href": "slides/presentation.html#temps-décran-vs-impacts-santé---tableau",
+    "title": "Analyse du Temps d’Écran chez les Enfants",
+    "section": "2.1 Temps d’écran vs Impacts Santé - Tableau",
+    "text": "2.1 Temps d’écran vs Impacts Santé - Tableau\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "slides/presentation.html#temps-décran-vs-impacts-santé---graphique",
+    "href": "slides/presentation.html#temps-décran-vs-impacts-santé---graphique",
+    "title": "Analyse du Temps d’Écran chez les Enfants",
+    "section": "2.2 Temps d’écran vs Impacts Santé - Graphique",
+    "text": "2.2 Temps d’écran vs Impacts Santé - Graphique\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "slides/presentation.html#comparaison-par-genre",
+    "href": "slides/presentation.html#comparaison-par-genre",
+    "title": "Analyse du Temps d’Écran chez les Enfants",
+    "section": "3.1 Comparaison par Genre",
+    "text": "3.1 Comparaison par Genre\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "slides/presentation.html#effet-du-contenu-éducatif",
+    "href": "slides/presentation.html#effet-du-contenu-éducatif",
+    "title": "Analyse du Temps d’Écran chez les Enfants",
+    "section": "3.2 Effet du Contenu Éducatif",
+    "text": "3.2 Effet du Contenu Éducatif\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "slides/presentation.html#test-t-garçons-vs-filles",
+    "href": "slides/presentation.html#test-t-garçons-vs-filles",
+    "title": "Analyse du Temps d’Écran chez les Enfants",
+    "section": "4.1 Test t: Garçons vs Filles",
+    "text": "4.1 Test t: Garçons vs Filles\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "slides/presentation.html#test-de-mann-whitney-urbain-vs-rural",
+    "href": "slides/presentation.html#test-de-mann-whitney-urbain-vs-rural",
+    "title": "Analyse du Temps d’Écran chez les Enfants",
+    "section": "4.2 Test de Mann-Whitney: Urbain vs Rural",
+    "text": "4.2 Test de Mann-Whitney: Urbain vs Rural\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "slides/presentation.html#test-du-chi-carré-appareil-vs-dépassement-de-limite",
+    "href": "slides/presentation.html#test-du-chi-carré-appareil-vs-dépassement-de-limite",
+    "title": "Analyse du Temps d’Écran chez les Enfants",
+    "section": "4.3 Test du Chi-carré: Appareil vs Dépassement de Limite",
+    "text": "4.3 Test du Chi-carré: Appareil vs Dépassement de Limite\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "slides/presentation.html#résultats-critiques",
+    "href": "slides/presentation.html#résultats-critiques",
+    "title": "Analyse du Temps d’Écran chez les Enfants",
+    "section": "Résultats Critiques",
+    "text": "Résultats Critiques\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "slides/presentation.html#recommandations-par-groupe-dâge",
+    "href": "slides/presentation.html#recommandations-par-groupe-dâge",
+    "title": "Analyse du Temps d’Écran chez les Enfants",
+    "section": "💡 Recommandations par Groupe d’Âge",
+    "text": "💡 Recommandations par Groupe d’Âge\n\n\n8-10 ans\n\n⏰ Max: 2h/jour\n📚 ≥50% éducatif\n📱 TV/Tablette préféré\n⏸️ Pause 15min/30min\n👨‍👩‍👧 Supervision parentale\n\n\n11-13 ans 🚨\n\n⏰ Max: 3h/jour\n📚 Ratio ≥0.5\n🔒 Contrôle strict\n😴 Surveiller sommeil\n👥 Activités sociales\n\n\n14-18 ans\n\n⏰ Max: 3-4h/jour\n🌙 Filtre bleu &gt;20h\n📚Priorité à l’éducation\n😴Hygiène de sommeil"
+  },
+  {
+    "objectID": "slides/presentation.html#seuils-dintervention",
+    "href": "slides/presentation.html#seuils-dintervention",
+    "title": "Analyse du Temps d’Écran chez les Enfants",
+    "section": "Seuils d’Intervention",
+    "text": "Seuils d’Intervention\n\n\n\nTemps d’écran\nRisque santé\nAction\nUrgence\n\n\n\n\n&lt; 2h/jour\n0%\n✅ Maintenir\nAucun\n\n\n2-4h/jour\n56%\n⚠️ Surveiller\nFaible\n\n\n4-6h/jour\n81%\n🔴 Intervenir\nÉlevé\n\n\n&gt; 6h/jour\n82%\n🚨 URGENT\nCritique"
+  },
+  {
+    "objectID": "slides/presentation.html#conclusion",
+    "href": "slides/presentation.html#conclusion",
+    "title": "Analyse du Temps d’Écran chez les Enfants",
+    "section": "Conclusion",
+    "text": "Conclusion\n\nLes données montrent une réelle préoccupation de santé publique : 85,8% des enfants indiens dépassent les recommandations de temps d’écran, avec 67,1% présentant des impacts sur la santé.\n\nActions prioritaires :\n\n🎯 Cibler les 11-13 ans (groupe à risque le plus élevé)\n📚 Promouvoir le contenu éducatif (effet protecteur ~20%)\n👨‍👩‍👧 Sensibilisation parentale\n🏥 Suivi médical pour les enfants exposés &gt;6h/jour"
+  },
+  {
+    "objectID": "slides/presentation.html#temps-décran-vs-impacts-santé",
+    "href": "slides/presentation.html#temps-décran-vs-impacts-santé",
+    "title": "Analyse du Temps d’Écran chez les Enfants",
+    "section": "2.1 Temps d’écran vs Impacts Santé",
+    "text": "2.1 Temps d’écran vs Impacts Santé\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "slides/presentation.html#visualisation-des-impacts-santé",
+    "href": "slides/presentation.html#visualisation-des-impacts-santé",
+    "title": "Analyse du Temps d’Écran chez les Enfants",
+    "section": "2.2 Visualisation des Impacts Santé",
+    "text": "2.2 Visualisation des Impacts Santé\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "slides/presentation.html#effet-protecteur-du-contenu-éducatif",
+    "href": "slides/presentation.html#effet-protecteur-du-contenu-éducatif",
+    "title": "Analyse du Temps d’Écran chez les Enfants",
+    "section": "3.2 Effet Protecteur du Contenu Éducatif",
+    "text": "3.2 Effet Protecteur du Contenu Éducatif\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "slides/presentation.html#test-chi-carré-appareil-vs-dépassement-limite",
+    "href": "slides/presentation.html#test-chi-carré-appareil-vs-dépassement-limite",
+    "title": "Analyse du Temps d’Écran chez les Enfants",
+    "section": "4.2 Test Chi-carré: Appareil vs Dépassement Limite",
+    "text": "4.2 Test Chi-carré: Appareil vs Dépassement Limite\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "slides/presentation.html#test-t-ratio-éducatif-vs-impact-santé",
+    "href": "slides/presentation.html#test-t-ratio-éducatif-vs-impact-santé",
+    "title": "Analyse du Temps d’Écran chez les Enfants",
+    "section": "4.3 Test t: Ratio Éducatif vs Impact Santé",
+    "text": "4.3 Test t: Ratio Éducatif vs Impact Santé\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "slides/presentation.html#merci-pour-votre-attention",
+    "href": "slides/presentation.html#merci-pour-votre-attention",
+    "title": "Analyse du Temps d’Écran chez les Enfants",
+    "section": "Merci pour votre attention",
+    "text": "Merci pour votre attention"
   }
 ]

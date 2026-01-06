@@ -7,7 +7,7 @@ library(tidyverse)
 # Load cleaned data
 data <- read.csv("data/screen_time_clean.csv", stringsAsFactors = FALSE)
 
-cat("\n🔍 ANALYSES APPROFONDIES...\n\n")
+
 
 # ================================
 # 1. AGE GROUP x DEVICE ANALYSIS
@@ -227,5 +227,73 @@ obesity <- data %>%
 cat("\nObesity Risk :\n")
 print(obesity)
 cat("\n")
+
+
+# ================================
+# 9. TESTS D'HYPOTHESES SIMPLES
+# ================================
+# ================================
+# 9. TESTS D'HYPOTHESES SIMPLES
+# ================================
+
+cat("\n🔬 TESTS D'HYPOTHESES\n")
+
+# ---- Test 1 : Temps écran garçons vs filles ----
+# Objectif : comparer le temps écran moyen entre garçons et filles
+# H0 : moyenne filles = moyenne garçons
+# H1 : moyenne filles != moyenne garçons
+t_test_gender <- t.test(
+  Avg_Daily_Screen_Time_hr ~ Gender, # variable continue ~ variable catégorielle
+  data = data,
+  var.equal = TRUE # on suppose variances égales pour simplifier
+)
+cat("\n1️⃣ t-test : Temps écran garçons vs filles\n")
+print(t_test_gender)
+
+# Interprétation simple
+if(t_test_gender$p.value < 0.05){
+  cat("=> Différence significative de temps écran entre garçons et filles\n")
+} else {
+  cat("=> Pas de différence significative\n")
+}
+# COMMENTAIRE : ici p-value = 0.278 > 0.05 donc pas de différence
+# Les garçons et filles passent en moyenne le même temps devant les écrans (~4,35h vs 4,39h)
+
+# ---- Test 2 : Appareil vs Dépassement limite ----
+# Objectif : voir si le type d'appareil est lié au dépassement des limites
+# H0 : appareil et dépassement indépendants
+# H1 : appareil et dépassement liés
+device_exceed <- table(data$Primary_Device, data$Exceeded_Recommended_Limit) # table de contingence
+chi2_device <- chisq.test(device_exceed) # test chi-2 d'indépendance
+cat("\n2️⃣ Test chi-2 : Appareil x Dépassement limite\n")
+print(chi2_device)
+
+if(chi2_device$p.value < 0.05){
+  cat("=> Dépendance significative : type d'appareil lié au dépassement\n")
+} else {
+  cat("=> Pas de lien significatif\n")
+}
+# COMMENTAIRE : ici p-value < 0.05 donc certains appareils favorisent le dépassement
+# On peut regarder la table pour savoir lequel (ex: tablettes, smartphones)
+
+# ---- Test 3 : Ratio éducatif vs Impact santé ----
+# Objectif : comparer le ratio éducatif moyen chez enfants avec ou sans impact santé
+# H0 : moyenne ratio éducatif sans impact = moyenne ratio éducatif avec impact
+# H1 : moyenne ratio éducatif diffère
+t_test_ratio <- t.test(
+  Educational_to_Recreational_Ratio ~ Has_Health_Impact,
+  data = data,
+  var.equal = FALSE # Welch test pour variances potentiellement différentes
+)
+cat("\n3️⃣ t-test : Ratio éducatif x Impact santé\n")
+print(t_test_ratio)
+
+if(t_test_ratio$p.value < 0.05){
+  cat("=> Différence significative : le ratio éducatif semble influencer la santé\n")
+} else {
+  cat("=> Pas de différence significative\n")
+}
+# COMMENTAIRE : ici p-value < 2.2e-16 donc le ratio éducatif est significativement plus élevé
+# chez les enfants sans impact santé. Plus éducatif → moins de problèmes de santé
 
 
