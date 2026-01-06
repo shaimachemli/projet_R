@@ -201,9 +201,6 @@ cat("\n💡 85.8% des enfants dépassent la limite !\n\n")
 # 10. CORRELATIONS
 # ================================
 
-cat("═══════════════════════════════════════════════════════════\n")
-cat("🔗 CORRÉLATIONS NUMÉRIQUES\n")
-cat("═══════════════════════════════════════════════════════════\n\n")
 
 cor_data <- data %>%
   select(Age, Avg_Daily_Screen_Time_hr, Educational_to_Recreational_Ratio, Has_Health_Impact) %>%

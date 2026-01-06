@@ -23,39 +23,33 @@ filters:
 
 ## Introduction
 
-**Contexte :** L'usage des technologies numériques transforme profondément le quotidien des enfants, surtout dans les pays émergents.
-L'accès aux smartphones, tablettes et téléviseurs s'est fortement démocratisé ces 10 dernières années.
+**Contexte :** L'usage des technologies numériques transforme profondément le quotidien des enfants, surtout dans les pays émergents. L'accès aux smartphones, tablettes et téléviseurs s'est fortement démocratisé ces 10 dernières années.
 
 **Enjeux :** Cette transition soulève des préoccupations de santé publique, notamment chez les enfants et adolescents, population particulièrement vulnérable aux effets d'une **exposition prolongée aux écrans**.
 
----
+------------------------------------------------------------------------
 
 ## 🎯 Étude et Objectifs
 
-- **Échantillon :** 9,668 enfants indiens (8-18 ans)
-- **Variables clés :**
-  - ⏰ Temps d'écran quotidien
-  - 📱 Type d'appareil utilisé
-  - 🏥 Indicateurs de santé physique et comportementale
-- **Objectif :** Fournir une analyse fondée sur les données pour éclairer :
-  - 👨‍👩‍👧 Décisions parentales
-  - 🎓 Stratégies éducatives
-  - 🏛️ Politiques de santé publique
+-   **Échantillon :** 9,668 enfants indiens (8-18 ans)
+-   **Variables clés :**
+    -   ⏰ Temps d'écran quotidien
+    -   📱 Type d'appareil utilisé
+    -   🏥 Indicateurs de santé physique et comportementale
+-   **Objectif :** Fournir une analyse fondée sur les données pour éclairer :
+    -   👨‍👩‍👧 Décisions parentales
+    -   🎓 Stratégies éducatives
+    -   🏛️ Politiques de santé publique
 
----
+------------------------------------------------------------------------
 
 ## ❓ Problématique
 
 > Dans quelle mesure l'utilisation des écrans influence-t-elle la santé des enfants, et quels facteurs peuvent moduler ces effets ?
 
-**Questions de recherche :**
-- Combien de temps les enfants passent-ils sur les écrans ?
-- Quels appareils sont les plus utilisés ?
-- Quelles conséquences pour la santé ?
-- Existe-t-il des facteurs de protection ?
-- Comment les recommandations varient-elles par groupe d'âge ?
+**Questions de recherche :** - Combien de temps les enfants passent-ils sur les écrans ? - Quels appareils sont les plus utilisés ? - Quelles conséquences pour la santé ? - Existe-t-il des facteurs de protection ? - Comment les recommandations varient-elles par groupe d'âge ?
 
----
+------------------------------------------------------------------------
 
 # 📊 Data Loading & Exploration
 
@@ -78,53 +72,15 @@ cat("Variables : ", paste(colnames(data), collapse=" | "), "\n\n")
 str(data)
 ```
 
----
+------------------------------------------------------------------------
 
 ## 📈 Statistiques Descriptives Globales
 
-
-::: {.cell}
-
-```{.r .cell-code}
+```{r}
 cat("═══════════════════════════════════════════════════════════\n")
-```
-
-::: {.cell-output .cell-output-stdout}
-
-```
-═══════════════════════════════════════════════════════════
-```
-
-
-:::
-
-```{.r .cell-code}
 cat("📊 STATISTIQUES GLOBALES\n")
-```
-
-::: {.cell-output .cell-output-stdout}
-
-```
-📊 STATISTIQUES GLOBALES
-```
-
-
-:::
-
-```{.r .cell-code}
 cat("═══════════════════════════════════════════════════════════\n\n")
-```
 
-::: {.cell-output .cell-output-stdout}
-
-```
-═══════════════════════════════════════════════════════════
-```
-
-
-:::
-
-```{.r .cell-code}
 stats_table <- data.frame(
   Métrique = c(
     "Population totale",
@@ -143,40 +99,16 @@ stats_table <- data.frame(
     paste0(round(sum(data$Has_Health_Impact==TRUE)/nrow(data)*100, 1), "%")
   )
 )
-```
 
-::: {.cell-output .cell-output-error}
-
-```
-Error in data$Age: objet de type 'closure' non indiçable
-```
-
-
-:::
-
-```{.r .cell-code}
 knitr::kable(stats_table, format="html", 
              col.names=c("Métrique", "Valeur"))
 ```
 
-::: {.cell-output .cell-output-error}
-
-```
-Error: objet 'stats_table' introuvable
-```
-
-
-:::
-:::
-
-
----
+------------------------------------------------------------------------
 
 # 📍 PARTIE 1 : Résultats Descriptifs
 
 ## 1.1 Distribution par Groupe d'Âge
-
-
 
 ```{webr-r}
 # Graphique: Temps d'écran par groupe d'âge
@@ -202,12 +134,9 @@ ggplot(age_plot_data, aes(x = reorder(Age_Group, Mean_Screen), y = Mean_Screen, 
   theme(legend.position = "none", plot.title = element_text(face="bold", size=14))
 ```
 
----
+------------------------------------------------------------------------
 
 ## 1.2 Conformité aux Limites Recommandées
-
-
-   
 
 ```{webr-r}
 # Pie Chart: Conformity
@@ -232,15 +161,9 @@ ggplot(exceeded_data, aes(x = "", y = Count, fill = Label)) +
   theme(legend.position = "bottom", plot.title = element_text(face="bold", hjust=0.5))
 ```
 
----
+------------------------------------------------------------------------
 
 ## 1.3 Primary Device Distribution
-
-
-
-
-
-
 
 ```{webr-r}
 # Device distribution chart
@@ -259,7 +182,7 @@ ggplot(device_plot_data, aes(x = reorder(Primary_Device, Count), y = Count, fill
   theme(legend.position = "none", plot.title = element_text(face="bold"))
 ```
 
----
+------------------------------------------------------------------------
 
 # 🏥 PARTIE 2 : Health Impacts
 
@@ -326,7 +249,7 @@ ggplot(impact_plot_data, aes(x = Screen_Category, y = Impact_Pct, fill = Screen_
         axis.text.x = element_text(angle = 15, hjust = 1))
 ```
 
----
+------------------------------------------------------------------------
 
 ## 2.1 Temps d’écran vs Impacts Santé
 
@@ -366,7 +289,7 @@ ggplot(impact_plot_data, aes(x = Screen_Category, y = Impact_Pct, fill = Screen_
 
 ```
 
----
+------------------------------------------------------------------------
 
 # 📈 PARTIE 3 : Comparative Analysis
 
@@ -403,7 +326,7 @@ ggplot(gender_data, aes(x = Gender, y = Mean_Screen, fill = Gender)) +
 
 ```
 
----
+------------------------------------------------------------------------
 
 ## 3.2 Effet du Contenu Éducatif
 
@@ -439,7 +362,7 @@ ggplot(edu_data, aes(x = Education_Level, y = Impact_Pct, fill = Education_Level
 
 ```
 
----
+------------------------------------------------------------------------
 
 # 🔬 PARTIE 4 : Statistical Tests
 
@@ -479,7 +402,7 @@ cohens_d <- (mean(boys) - mean(girls))/pooled_sd
 cat(sprintf("\nCOHEN'S D = %.4f (Negligible effect size)\n", cohens_d))
 ```
 
----
+------------------------------------------------------------------------
 
 ## 4.2 Mann-Whitney Test: Urban vs Rural
 
@@ -508,7 +431,7 @@ if(wilcox_result$p.value < 0.05) {
 }
 ```
 
----
+------------------------------------------------------------------------
 
 ## 4.3 Chi-Square Test: Device vs Exceeding Limit
 
@@ -533,7 +456,7 @@ cat("✓ RESULT: HIGHLY SIGNIFICANT ASSOCIATION (p < 0.001)\n")
 cat("   → Device type influences screen time exposure\n")
 ```
 
----
+------------------------------------------------------------------------
 
 # 🎯 PARTIE 5 : Key Findings & Recommendations
 
@@ -560,57 +483,44 @@ findings <- data.frame(
 knitr::kable(findings, format="html")
 ```
 
----
+------------------------------------------------------------------------
 
 ## 💡 Recommandations par groupe d’âge
 
-::: columns
+:::::: columns
 ::: {.column width="33%"}
-**8-10 ans**
-- Maximum 2h/jour
-- ≥ 50% du temps éducatif
-- Préférence : TV/Tablette
-- Pauses de 15 min toutes les 30 min
+**8-10 ans** - Maximum 2h/jour - ≥ 50% du temps éducatif - Préférence : TV/Tablette - Pauses de 15 min toutes les 30 min
 :::
 
 ::: {.column width="33%"}
-**11-13 ans** 🚨
-- Maximum 3h/jour
-- Ratio éducatif ≥ 0,5
-- Contrôle des appareils
-- Surveiller le sommeil
+**11-13 ans** 🚨 - Maximum 3h/jour - Ratio éducatif ≥ 0,5 - Contrôle des appareils - Surveiller le sommeil
 :::
 
 ::: {.column width="33%"}
-**14-18 ans**
-- Maximum 3-4h/jour
-- Filtre lumière bleue après 20h
-- Priorité à l’éducation
-- Hygiène de sommeil
+**14-18 ans** - Maximum 3-4h/jour - Filtre lumière bleue après 20h - Priorité à l’éducation - Hygiène de sommeil
 :::
-:::
+::::::
 
----
+------------------------------------------------------------------------
 
 ## Seuils d’intervention
 
-| Temps d’écran | Risque santé | Action | Urgence |
-|---------------|-------------|--------|---------|
-| < 2h/jour     | 0%          | ✅ Maintenir | Aucun |
-| 2-4h/jour     | 56%         | ⚠️ Surveiller | Faible |
-| 4-6h/jour     | 81%         | 🔴 Intervenir | Élevé |
-| > 6h/jour     | 82%         | 🚨 URGENT | Critique |
+| Temps d’écran | Risque santé | Action        | Urgence  |
+|---------------|--------------|---------------|----------|
+| \< 2h/jour    | 0%           | ✅ Maintenir  | Aucun    |
+| 2-4h/jour     | 56%          | ⚠️ Surveiller | Faible   |
+| 4-6h/jour     | 81%          | 🔴 Intervenir | Élevé    |
+| \> 6h/jour    | 82%          | 🚨 URGENT     | Critique |
 
----
+------------------------------------------------------------------------
 
 ## Conclusion
 
 > **Les données montrent une réelle préoccupation de santé publique :** 85,8% des enfants indiens dépassent les recommandations de temps d’écran, avec 67,1% présentant des impacts sur la santé.
 
-**Actions prioritaires :**
-1. 🎯 Cibler les 11-13 ans (groupe à risque le plus élevé)  
-2. 📚 Promouvoir le contenu éducatif (effet protecteur ~20%)  
-3. 👨‍👩‍👧 Sensibilisation parentale  
-4. 🏥 Suivi médical pour les enfants exposés >6h/jour  
+**Actions prioritaires :** 1. 🎯 Cibler les 11-13 ans (groupe à risque le plus élevé)\
+2. 📚 Promouvoir le contenu éducatif (effet protecteur \~20%)\
+3. 👨‍👩‍👧 Sensibilisation parentale\
+4. 🏥 Suivi médical pour les enfants exposés \>6h/jour
 
 **Espoir :** La mise en œuvre d’interventions basées sur les données peut réduire significativement les impacts sur la santé et améliorer le bien-être des enfants.

@@ -2,30 +2,30 @@
   {
     "objectID": "presentation.html#introduction",
     "href": "presentation.html#introduction",
-    "title": "Kids Screen Time Analysis",
+    "title": "Analyse du Temps d’Écran chez les Enfants",
     "section": "Introduction",
-    "text": "Introduction\nContexte : L’usage des technologies numériques transforme profondément le quotidien des enfants, surtout dans les pays émergents.\nL’accès aux smartphones, tablettes et téléviseurs s’est fortement démocratisé ces 10 dernières années.\nEnjeux : Cette transition soulève des préoccupations de santé publique, notamment chez les enfants et adolescents, population particulièrement vulnérable aux effets d’une exposition prolongée aux écrans."
+    "text": "Introduction\nContexte : L’usage des technologies numériques transforme profondément le quotidien des enfants, surtout dans les pays émergents. L’accès aux smartphones, tablettes et téléviseurs s’est fortement démocratisé ces 10 dernières années.\nEnjeux : Cette transition soulève des préoccupations de santé publique, notamment chez les enfants et adolescents, population particulièrement vulnérable aux effets d’une exposition prolongée aux écrans."
   },
   {
     "objectID": "presentation.html#étude-et-objectifs",
     "href": "presentation.html#étude-et-objectifs",
-    "title": "Kids Screen Time Analysis",
-    "section": "Étude et objectifs",
-    "text": "Étude et objectifs\n\nÉchantillon : 9 668 enfants indiens\nVariables clés :\n\nTemps d’écran quotidien\nType d’appareil utilisé\nIndicateurs de santé physique et comportementale\n\nObjectif : Fournir une analyse fondée sur les données pour éclairer :\n\nDécisions parentales\nStratégies éducatives\nPolitiques de santé publique"
+    "title": "Analyse du Temps d’Écran chez les Enfants",
+    "section": "🎯 Étude et Objectifs",
+    "text": "🎯 Étude et Objectifs\n\nÉchantillon : 9,668 enfants indiens (8-18 ans)\nVariables clés :\n\n⏰ Temps d’écran quotidien\n📱 Type d’appareil utilisé\n🏥 Indicateurs de santé physique et comportementale\n\nObjectif : Fournir une analyse fondée sur les données pour éclairer :\n\n👨‍👩‍👧 Décisions parentales\n🎓 Stratégies éducatives\n🏛️ Politiques de santé publique"
   },
   {
     "objectID": "presentation.html#problématique",
     "href": "presentation.html#problématique",
-    "title": "Kids Screen Time Analysis",
-    "section": "Problématique",
-    "text": "Problématique\n\nDans quelle mesure l’utilisation des écrans influence-t-elle la santé des enfants, et quels facteurs peuvent moduler ces effets ?\n\nQuestions de recherche : - Combien de temps les enfants passent-ils sur les écrans ? - Quels appareils sont les plus utilisés ? - Quelles conséquences pour la santé ? - Existe-t-il des facteurs de protection ?"
+    "title": "Analyse du Temps d’Écran chez les Enfants",
+    "section": "❓ Problématique",
+    "text": "❓ Problématique\n\nDans quelle mesure l’utilisation des écrans influence-t-elle la santé des enfants, et quels facteurs peuvent moduler ces effets ?\n\nQuestions de recherche : - Combien de temps les enfants passent-ils sur les écrans ? - Quels appareils sont les plus utilisés ? - Quelles conséquences pour la santé ? - Existe-t-il des facteurs de protection ? - Comment les recommandations varient-elles par groupe d’âge ?"
   },
   {
     "objectID": "presentation.html#données-aperçu-du-dataset",
     "href": "presentation.html#données-aperçu-du-dataset",
     "title": "Kids Screen Time Analysis",
     "section": "Données & aperçu du dataset",
-    "text": "Données & aperçu du dataset\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+    "text": "Données & aperçu du dataset\nThe two sample t-Test is used to compare two groups of data: Related to our example, we test the following hypotheses:\n\\(H_0\\): Both drugs have the same effect.\n\\(H_A\\): The drugs have a different effect, i.e. one of the drugs is stronger."
   },
   {
     "objectID": "presentation.html#données-aperçu-du-dataset-1",
@@ -107,9 +107,9 @@
   {
     "objectID": "presentation.html#distribution-par-groupe-dâge",
     "href": "presentation.html#distribution-par-groupe-dâge",
-    "title": "Kids Screen Time Analysis: Data Management and Statistical Analysis",
-    "section": "Distribution par groupe d’âge",
-    "text": "Distribution par groupe d’âge\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n💡 Les plus jeunes (8-10 ans) passent moins de temps sur les écrans, mais certains dépassent la limite.\n\n##Distribution par sexe, appareil et localisation\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nExercise 2: Create a boxplot, and perform the tests. What is the effect size, i.e. by how many hours differs sleep duration?\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+    "title": "Analyse du Temps d’Écran chez les Enfants",
+    "section": "1.1 Distribution par Groupe d’Âge",
+    "text": "1.1 Distribution par Groupe d’Âge\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
   },
   {
     "objectID": "presentation.html#analyses-approfondies",
@@ -131,5 +131,159 @@
     "title": "Kids Screen Time Analysis",
     "section": "2. Méthodologie",
     "text": "2. Méthodologie\nLe workflow général suivi est le suivant :\ngraph TD\nA[Dataset brut : Screen Time CSV] --&gt; B[Nettoyage & Prétraitement]\nB --&gt; C[Création de variables : Age_Group, Screen_Category, Education_Level, Has_Health_Impact]\nC --&gt; D[Analyses descriptives : globales et par sous-groupes]\nD --&gt; E[Analyses approfondies : impacts santé, appareil, âge, localisation]\nE --&gt; F[Résultats synthétiques et recommandations]\n\nstyle A fill:#e1f5fe\nstyle B fill:#f3e5f5\nstyle C fill:#e8f5e8\nstyle D fill:#fff3e0\nstyle E fill:#fce4ec\nstyle F fill:#e8f5e8,stroke:#333\n\n\n## Introduction\n\n**Contexte :** L’usage des technologies numériques transforme profondément le quotidien des enfants, surtout dans les pays émergents.  \nL’accès aux smartphones, tablettes et téléviseurs s’est fortement démocratisé ces 10 dernières années.\n\n**Enjeux :** Cette transition soulève des préoccupations de santé publique, notamment chez les enfants et adolescents, population particulièrement vulnérable aux effets d’une **exposition prolongée aux écrans**.\n\n---\n\n## Étude et objectifs\n\n- **Échantillon :** 9 668 enfants indiens\n- **Variables clés :**\n  - Temps d’écran quotidien\n  - Type d’appareil utilisé\n  - Indicateurs de santé physique et comportementale\n- **Objectif :** Fournir une analyse fondée sur les données pour éclairer :\n  - Décisions parentales\n  - Stratégies éducatives\n  - Politiques de santé publique\n\n---\n\n## Problématique\n\n&gt; Dans quelle mesure l’utilisation des écrans influence-t-elle la santé des enfants, et quels facteurs peuvent moduler ces effets ?\n\n**Questions de recherche :**\n- Combien de temps les enfants passent-ils sur les écrans ?\n- Quels appareils sont les plus utilisés ?\n- Quelles conséquences pour la santé ?\n- Existe-t-il des facteurs de protection ?\n\n---\n\n\n## Données & aperçu du dataset\n\n\n\n\n```{webr-r}\nurl &lt;- \"https://raw.githubusercontent.com/shaimachemli/projet_R/refs/heads/main/data/screen_time_clean.csv\"\ndata &lt;- read.csv(url)\ndim(data) # lignes / colonnes\nsummary(data) # résumé des variables numériques\nstr(data) # structure"
+  },
+  {
+    "objectID": "presentation.html#dataset",
+    "href": "presentation.html#dataset",
+    "title": "Kids Screen Time Analysis",
+    "section": "Dataset",
+    "text": "Dataset\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "presentation.html#exploration-dataset",
+    "href": "presentation.html#exploration-dataset",
+    "title": "Kids Screen Time Analysis",
+    "section": "Exploration Dataset",
+    "text": "Exploration Dataset\n\nObservations : 9 668 enfants\nVariables : 12 (ex. âge, sexe, temps d’écran, appareil principal, activité physique)\nTypes : mix de numérique et catégoriel\nPréparation : valeurs manquantes traitées, variables harmonisées"
+  },
+  {
+    "objectID": "presentation.html#statistiques-descriptives-globales",
+    "href": "presentation.html#statistiques-descriptives-globales",
+    "title": "Analyse du Temps d’Écran chez les Enfants",
+    "section": "📈 Statistiques Descriptives Globales",
+    "text": "📈 Statistiques Descriptives Globales\n\ncat(\"═══════════════════════════════════════════════════════════\\n\")\n\n═══════════════════════════════════════════════════════════\n\ncat(\"📊 STATISTIQUES GLOBALES\\n\")\n\n📊 STATISTIQUES GLOBALES\n\ncat(\"═══════════════════════════════════════════════════════════\\n\\n\")\n\n═══════════════════════════════════════════════════════════\n\nstats_table &lt;- data.frame(\n  Métrique = c(\n    \"Population totale\",\n    \"Âge moyen\",\n    \"Âge min - max\",\n    \"Temps écran moyen\",\n    \"% Dépassement limite\",\n    \"% Impacts santé\"\n  ),\n  Valeur = c(\n    format(nrow(data), big.mark=\",\"),\n    paste0(round(mean(data$Age), 1), \" ans\"),\n    paste0(min(data$Age), \" - \", max(data$Age), \" ans\"),\n    paste0(round(mean(data$Avg_Daily_Screen_Time_hr), 2), \" h/jour\"),\n    paste0(round(sum(data$Exceeded_Recommended_Limit==\"True\")/nrow(data)*100, 1), \"%\"),\n    paste0(round(sum(data$Has_Health_Impact==TRUE)/nrow(data)*100, 1), \"%\")\n  )\n)\n\nError in data$Age: objet de type 'closure' non indiçable\n\nknitr::kable(stats_table, format=\"html\", \n             col.names=c(\"Métrique\", \"Valeur\"))\n\nError: objet 'stats_table' introuvable"
+  },
+  {
+    "objectID": "presentation.html#chargement-et-structure-des-données",
+    "href": "presentation.html#chargement-et-structure-des-données",
+    "title": "Analyse du Temps d’Écran chez les Enfants",
+    "section": "Chargement et Structure des Données",
+    "text": "Chargement et Structure des Données\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "presentation.html#conformité-aux-limites-recommandées",
+    "href": "presentation.html#conformité-aux-limites-recommandées",
+    "title": "Analyse du Temps d’Écran chez les Enfants",
+    "section": "1.2 Conformité aux Limites Recommandées",
+    "text": "1.2 Conformité aux Limites Recommandées\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "presentation.html#primary-device-distribution",
+    "href": "presentation.html#primary-device-distribution",
+    "title": "Analyse du Temps d’Écran chez les Enfants",
+    "section": "1.3 Primary Device Distribution",
+    "text": "1.3 Primary Device Distribution\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "presentation.html#screen-time-vs-health-impacts-correlation",
+    "href": "presentation.html#screen-time-vs-health-impacts-correlation",
+    "title": "Analyse du Temps d’Écran chez les Enfants",
+    "section": "2.1 Screen Time vs Health Impacts Correlation",
+    "text": "2.1 Screen Time vs Health Impacts Correlation\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "presentation.html#specific-health-problems",
+    "href": "presentation.html#specific-health-problems",
+    "title": "Kids Screen Time Analysis",
+    "section": "2.2 Specific Health Problems",
+    "text": "2.2 Specific Health Problems\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "presentation.html#gender-comparison",
+    "href": "presentation.html#gender-comparison",
+    "title": "Kids Screen Time Analysis",
+    "section": "3.1 Gender Comparison",
+    "text": "3.1 Gender Comparison\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "presentation.html#educational-content-effect",
+    "href": "presentation.html#educational-content-effect",
+    "title": "Kids Screen Time Analysis",
+    "section": "3.2 Educational Content Effect",
+    "text": "3.2 Educational Content Effect\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "presentation.html#t-test-boys-vs-girls",
+    "href": "presentation.html#t-test-boys-vs-girls",
+    "title": "Analyse du Temps d’Écran chez les Enfants",
+    "section": "4.1 T-Test: Boys vs Girls",
+    "text": "4.1 T-Test: Boys vs Girls\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "presentation.html#mann-whitney-test-urban-vs-rural",
+    "href": "presentation.html#mann-whitney-test-urban-vs-rural",
+    "title": "Analyse du Temps d’Écran chez les Enfants",
+    "section": "4.2 Mann-Whitney Test: Urban vs Rural",
+    "text": "4.2 Mann-Whitney Test: Urban vs Rural\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "presentation.html#chi-square-test-device-vs-exceeding-limit",
+    "href": "presentation.html#chi-square-test-device-vs-exceeding-limit",
+    "title": "Analyse du Temps d’Écran chez les Enfants",
+    "section": "4.3 Chi-Square Test: Device vs Exceeding Limit",
+    "text": "4.3 Chi-Square Test: Device vs Exceeding Limit\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "presentation.html#critical-findings",
+    "href": "presentation.html#critical-findings",
+    "title": "Analyse du Temps d’Écran chez les Enfants",
+    "section": "Critical Findings",
+    "text": "Critical Findings\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "presentation.html#recommendations-by-age-group",
+    "href": "presentation.html#recommendations-by-age-group",
+    "title": "Kids Screen Time Analysis",
+    "section": "💡 Recommendations by Age Group",
+    "text": "💡 Recommendations by Age Group\n\n\n8-10 Years - Max 2h/day - 50%+ educational - Prefer TV/Tablet - 15min breaks each 30min\n\n11-13 Years 🚨 - Max 3h/day - Ratio ≥ 0.5 - Control devices - Monitor sleep\n\n14-18 Years - Max 3-4h/day - Blue light filter after 20h - Education priority - Sleep hygiene"
+  },
+  {
+    "objectID": "presentation.html#intervention-thresholds",
+    "href": "presentation.html#intervention-thresholds",
+    "title": "Kids Screen Time Analysis",
+    "section": "Intervention Thresholds",
+    "text": "Intervention Thresholds\n\n\n\nScreen Time\nHealth Risk\nAction\nUrgency\n\n\n\n\n&lt; 2h/day\n0%\n✅ Maintain\nNone\n\n\n2-4h/day\n56%\n⚠️ Monitor\nLow\n\n\n4-6h/day\n81%\n🔴 Intervene\nHigh\n\n\n&gt; 6h/day\n82%\n🚨 URGENT\nCritical"
+  },
+  {
+    "objectID": "presentation.html#conclusion",
+    "href": "presentation.html#conclusion",
+    "title": "Analyse du Temps d’Écran chez les Enfants",
+    "section": "Conclusion",
+    "text": "Conclusion\n\nLes données montrent une réelle préoccupation de santé publique : 85,8% des enfants indiens dépassent les recommandations de temps d’écran, avec 67,1% présentant des impacts sur la santé.\n\nActions prioritaires : 1. 🎯 Cibler les 11-13 ans (groupe à risque le plus élevé)\n2. 📚 Promouvoir le contenu éducatif (effet protecteur ~20%)\n3. 👨‍👩‍👧 Sensibilisation parentale\n4. 🏥 Suivi médical pour les enfants exposés &gt;6h/jour\nEspoir : La mise en œuvre d’interventions basées sur les données peut réduire significativement les impacts sur la santé et améliorer le bien-être des enfants."
+  },
+  {
+    "objectID": "presentation.html#recommandations-par-groupe-dâge",
+    "href": "presentation.html#recommandations-par-groupe-dâge",
+    "title": "Analyse du Temps d’Écran chez les Enfants",
+    "section": "💡 Recommandations par groupe d’âge",
+    "text": "💡 Recommandations par groupe d’âge\n\n\n8-10 ans - Maximum 2h/jour - ≥ 50% du temps éducatif - Préférence : TV/Tablette - Pauses de 15 min toutes les 30 min\n\n11-13 ans 🚨 - Maximum 3h/jour - Ratio éducatif ≥ 0,5 - Contrôle des appareils - Surveiller le sommeil\n\n14-18 ans - Maximum 3-4h/jour - Filtre lumière bleue après 20h - Priorité à l’éducation - Hygiène de sommeil"
+  },
+  {
+    "objectID": "presentation.html#seuils-dintervention",
+    "href": "presentation.html#seuils-dintervention",
+    "title": "Analyse du Temps d’Écran chez les Enfants",
+    "section": "Seuils d’intervention",
+    "text": "Seuils d’intervention\n\n\n\nTemps d’écran\nRisque santé\nAction\nUrgence\n\n\n\n\n&lt; 2h/jour\n0%\n✅ Maintenir\nAucun\n\n\n2-4h/jour\n56%\n⚠️ Surveiller\nFaible\n\n\n4-6h/jour\n81%\n🔴 Intervenir\nÉlevé\n\n\n&gt; 6h/jour\n82%\n🚨 URGENT\nCritique"
+  },
+  {
+    "objectID": "presentation.html#effet-du-contenu-éducatif",
+    "href": "presentation.html#effet-du-contenu-éducatif",
+    "title": "Analyse du Temps d’Écran chez les Enfants",
+    "section": "3.2 Effet du Contenu Éducatif",
+    "text": "3.2 Effet du Contenu Éducatif\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "presentation.html#temps-décran-vs-impacts-santé",
+    "href": "presentation.html#temps-décran-vs-impacts-santé",
+    "title": "Analyse du Temps d’Écran chez les Enfants",
+    "section": "2.1 Temps d’écran vs Impacts Santé",
+    "text": "2.1 Temps d’écran vs Impacts Santé\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "presentation.html#comparaison-par-genre",
+    "href": "presentation.html#comparaison-par-genre",
+    "title": "Analyse du Temps d’Écran chez les Enfants",
+    "section": "3.1 Comparaison par genre",
+    "text": "3.1 Comparaison par genre\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
   }
 ]

@@ -6,12 +6,12 @@
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-597958c53c93a607afca12fd375c57ed.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.8.26">
 
   <meta name="author" content="Shaima Chemli">
   <meta name="dcterms.date" content="2026-01-03">
-  <title>Analyse Criminelle Los Angeles – Kids Screen Time Analysis</title>
+  <title>Analyse Criminelle Los Angeles – Analyse du Temps d’Écran chez les Enfants</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -29,9 +29,74 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+      }
+    pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+    div.sourceCode
+      { color: #24292e;  }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #24292e; } /* Normal */
+    code span.al { color: #ff5555; font-weight: bold; } /* Alert */
+    code span.an { color: #6a737d; } /* Annotation */
+    code span.at { color: #d73a49; } /* Attribute */
+    code span.bn { color: #005cc5; } /* BaseN */
+    code span.bu { color: #d73a49; } /* BuiltIn */
+    code span.cf { color: #d73a49; } /* ControlFlow */
+    code span.ch { color: #032f62; } /* Char */
+    code span.cn { color: #005cc5; } /* Constant */
+    code span.co { color: #6a737d; } /* Comment */
+    code span.cv { color: #6a737d; } /* CommentVar */
+    code span.do { color: #6a737d; } /* Documentation */
+    code span.dt { color: #d73a49; } /* DataType */
+    code span.dv { color: #005cc5; } /* DecVal */
+    code span.er { color: #ff5555; text-decoration: underline; } /* Error */
+    code span.ex { color: #d73a49; font-weight: bold; } /* Extension */
+    code span.fl { color: #005cc5; } /* Float */
+    code span.fu { color: #6f42c1; } /* Function */
+    code span.im { color: #032f62; } /* Import */
+    code span.in { color: #6a737d; } /* Information */
+    code span.kw { color: #d73a49; } /* Keyword */
+    code span.op { color: #24292e; } /* Operator */
+    code span.ot { color: #6f42c1; } /* Other */
+    code span.pp { color: #d73a49; } /* Preprocessor */
+    code span.re { color: #6a737d; } /* RegionMarker */
+    code span.sc { color: #005cc5; } /* SpecialChar */
+    code span.ss { color: #032f62; } /* SpecialString */
+    code span.st { color: #032f62; } /* String */
+    code span.va { color: #e36209; } /* Variable */
+    code span.vs { color: #032f62; } /* VerbatimString */
+    code span.wa { color: #ff5555; } /* Warning */
   </style>
   <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto-534cd8e3a96973385dffff3f4709048d.css">
-  <link rel="stylesheet" href="style.css">
   <link href="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -402,7 +467,7 @@
   // Document level settings ----
 
   // Determine if we need to install R packages
-  globalThis.qwebrInstallRPackagesList = ['ggplot2', 'dplyr', 'effsize'];
+  globalThis.qwebrInstallRPackagesList = ['ggplot2', 'dplyr', 'effsize', 'knitr'];
 
   // Specify possible locations to search for the repository
   globalThis.qwebrPackageRepoURLS = ['https://repo.r-wasm.org/'];
@@ -424,7 +489,7 @@
   };
 
   // Store cell data
-  globalThis.qwebrCellDetails = [{"code":"url <- \"https://raw.githubusercontent.com/shaimachemli/projet_R/refs/heads/main/data/screen_time_clean.csv\"\ndata <- read.csv(url)\ndim(data) # lignes / colonnes\nsummary(data) # résumé des variables numériques\nstr(data) # structure\n\n","id":1,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"0.5","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-1","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"x1 <- c(8.7, 6.4, 7.8, 6.8, 7.9, 11.4, 11.7, 8.8, 8, 10)\nx2 <- c(9.9, 8.8, 9.1, 8.1, 7.9, 12.4, 13.5, 9.6, 12.6, 11.4)\nt.test(x1, x2)  # Welch-t-test","id":2,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"0.5","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-2","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"var.test(x1, x2)                    # F-test as pre-test","id":3,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"0.5","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-3","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"t.test(x1, x2, var.equal = TRUE)    # classical t-test","id":4,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"0.5","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-4","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"boxplot(x1, x2, names = c(\"Drug 1\", \"Drug 2\"), main = \"Sleep Duration Comparison\", col = c(\"lightblue\", \"lightgreen\"))","id":5,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"0.5","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-5","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# Effect size calculation\nmean_diff <- mean(x2) - mean(x1)\npooled_sd <- sqrt((var(x1) + var(x2))/2)\neffect_size <- mean_diff / pooled_sd\ncat(\"Effect size (Cohen's d):\", round(effect_size, 3))","id":6,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"0.5","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-6","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"x1 <- c(69,  77, 35, 34, 87, 45, 95, 83)\nx2 <- c(100, 97, 67, 42, 75, 73, 92, 97)","id":7,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"0.5","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-7","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"t.test(x1, x2, paired = TRUE)","id":8,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"0.5","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-8","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"t.test(x1, x2)","id":9,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"0.5","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-9","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# Unpaired: Mann-Whitney U test\nwilcox.test(x1, x2)","id":10,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"0.5","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-10","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# Paired test\nwilcox.test(x1, x2, paired = TRUE)","id":11,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"0.5","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-11","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"url <- \"https://tpetzoldt.github.io/datasets/data/fruits-2023-hse.csv\"\nfruits <- read.csv(url)\n\n# Extract data for box1 and box2\nweights_box1 <- fruits$weight[fruits$brand == \"box1\"]\nweights_box2 <- fruits$weight[fruits$brand == \"box2\"]\n\ncat(\"Box1: n =\", length(weights_box1), \"mean =\", round(mean(weights_box1), 2), \"\\n\")\ncat(\"Box2: n =\", length(weights_box2), \"mean =\", round(mean(weights_box2), 2), \"\\n\\n\")\n\n# Statistical test\nt_test_result <- t.test(weights_box1, weights_box2)\nprint(t_test_result)","id":12,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"0.5","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-12","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# Effect sizes calculation\nmean_x1 <- mean(weights_box1)\nmean_x2 <- mean(weights_box2)\nn1 <- length(weights_box1)\nn2 <- length(weights_box2)\n\n# Absolute effect size\nabsolute_effect <- mean_x1 - mean_x2\n\n# Pooled standard deviation\npooled_sd <- sqrt(((n1-1)*var(weights_box1) + (n2-1)*var(weights_box2)) / (n1 + n2 - 2))\n\n# Relative effect size (Cohen's d)\ncohens_d <- abs(absolute_effect) / pooled_sd\n\ncat(\"Absolute effect size (Δ):\", round(absolute_effect, 3), \"\\n\")\ncat(\"Pooled standard deviation:\", round(pooled_sd, 3), \"\\n\")\ncat(\"Cohen's d (δ):\", round(cohens_d, 3), \"\\n\")","id":13,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"0.5","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-13","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"x <- matrix(c(3, 1, 1, 3), nrow = 2)\ncolnames(x) <- c(\"Guess: Milk first\", \"Guess: Tea first\")\nrownames(x) <- c(\"Actual: Milk first\", \"Actual: Tea first\")\nx","id":14,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"0.5","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-14","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"fisher.test(x)","id":15,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"0.5","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-15","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"fisher.test(x, alternative = \"greater\")","id":16,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"0.5","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-16","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"chisq.test(x)","id":17,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"0.5","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-17","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# Second drug data\nx2 <- c(9.9, 8.8, 9.1, 8.1, 7.9, 12.4, 13.5, 9.6, 12.6, 11.4)\n\n# One sample t-test with mu = 8\nresult_ex1 <- t.test(x2, mu = 8)\ncat(\"=== EXERCISE 1 SOLUTION ===\\n\")\ncat(\"Second drug test against 8 hours sleep:\\n\")\ncat(\"p-value =\", round(result_ex1$p.value, 4), \"\\n\")\ncat(\"Mean difference =\", round(mean(x2) - 8, 2), \"hours\\n\")\n\n# Interpretation\nif(result_ex1$p.value < 0.05) {\n  cat(\"Conclusion: Reject H₀ - the drug significantly changes sleep duration\\n\")\n} else {\n  cat(\"Conclusion: Insufficient evidence to reject H₀\\n\")\n}","id":18,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"0.5","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-18","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# Detailed effect size calculations\nx1 <- c(8.7, 6.4, 7.8, 6.8, 7.9, 11.4, 11.7, 8.8, 8, 10)\nx2 <- c(9.9, 8.8, 9.1, 8.1, 7.9, 12.4, 13.5, 9.6, 12.6, 11.4)\n\nmean_x1 <- mean(x1)\nmean_x2 <- mean(x2)\nsd_x1 <- sd(x1)\nsd_x2 <- sd(x2)\n\ncat(\"=== EXERCISE 2 SOLUTION ===\\n\")\ncat(\"Mean Drug 1:\", round(mean_x1, 2), \"hours\\n\")\ncat(\"Mean Drug 2:\", round(mean_x2, 2), \"hours\\n\")\ncat(\"Absolute difference:\", round(mean_x2 - mean_x1, 2), \"hours\\n\")\n\n# Manual Cohen's d\nn1 <- length(x1)\nn2 <- length(x2)\npooled_sd <- sqrt(((n1-1)*sd_x1^2 + (n2-1)*sd_x2^2)/(n1+n2-2))\ncohens_d <- (mean_x2 - mean_x1)/pooled_sd\n\ncat(\"Cohen's d:\", round(cohens_d, 3), \"\\n\")\ncat(\"Interpretation:\", \n    ifelse(abs(cohens_d) < 0.2, \"very small effect\",\n    ifelse(abs(cohens_d) < 0.5, \"small effect\",\n    ifelse(abs(cohens_d) < 0.8, \"medium effect\", \"large effect\"))), \"\\n\")","id":19,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"0.5","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-19","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# Paired vs unpaired comparison\nx1 <- c(69, 77, 35, 34, 87, 45, 95, 83)\nx2 <- c(100, 97, 67, 42, 75, 73, 92, 97)\n\ncat(\"=== EXERCISE 3 SOLUTION ===\\n\")\ncat(\"Paired t-test results:\\n\")\npaired_test <- t.test(x1, x2, paired = TRUE)\nprint(paired_test)\n\ncat(\"\\nUnpaired t-test results:\\n\")\nunpaired_test <- t.test(x1, x2)\nprint(unpaired_test)\n\ncat(\"\\nKey comparison:\\n\")\ncat(\"Paired test p-value:\", round(paired_test$p.value, 4), \"\\n\")\ncat(\"Unpaired test p-value:\", round(unpaired_test$p.value, 4), \"\\n\")\ncat(\"Conclusion: Paired test is more appropriate for repeated measures\\n\")","id":20,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"0.5","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-20","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# Wilcoxon tests comparison\nx1 <- c(69, 77, 35, 34, 87, 45, 95, 83)\nx2 <- c(100, 97, 67, 42, 75, 73, 92, 97)\n\ncat(\"=== EXERCISE 4 SOLUTION ===\\n\")\ncat(\"Unpaired Wilcoxon test (Mann-Whitney):\\n\")\nunpaired_wilcox <- wilcox.test(x1, x2)\nprint(unpaired_wilcox)\n\ncat(\"\\nPaired Wilcoxon test:\\n\")\npaired_wilcox <- wilcox.test(x1, x2, paired = TRUE)\nprint(paired_wilcox)\n\ncat(\"\\nComparison with parametric tests:\\n\")\ncat(\"Paired t-test p-value:\", round(t.test(x1, x2, paired = TRUE)$p.value, 4), \"\\n\")\ncat(\"Paired Wilcoxon p-value:\", round(paired_wilcox$p.value, 4), \"\\n\")\ncat(\"Non-parametric tests are more robust to outliers and distribution assumptions\\n\")","id":21,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"0.5","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-21","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# Fisher's exact test alternatives\nx <- matrix(c(3, 1, 1, 3), nrow = 2)\n\ncat(\"=== EXERCISE 5 SOLUTION ===\\n\")\ncat(\"Two-sided test (default):\\n\")\nfisher_two <- fisher.test(x)\ncat(\"p-value =\", round(fisher_two$p.value, 4), \"\\n\")\n\ncat(\"\\nOne-sided test (greater):\\n\")\nfisher_greater <- fisher.test(x, alternative = \"greater\")\ncat(\"p-value =\", round(fisher_greater$p.value, 4), \"\\n\")\n\ncat(\"\\nOne-sided test (less):\\n\")\nfisher_less <- fisher.test(x, alternative = \"less\")\ncat(\"p-value =\", round(fisher_less$p.value, 4), \"\\n\")\n\ncat(\"\\nInterpretation:\\n\")\ncat(\"The 'greater' alternative is most appropriate here\\n\")\ncat(\"as we're testing if she can distinguish better than chance\\n\")","id":22,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"0.5","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-22","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# Sample size consideration for tea tasting\ncat(\"=== EXERCISE 6 SOLUTION ===\\n\")\ncat(\"With the current results (3 correct, 1 wrong for each type):\\n\")\nx_current <- matrix(c(3, 1, 1, 3), nrow = 2)\nfisher_current <- fisher.test(x_current, alternative = \"greater\")\ncat(\"Current p-value =\", round(fisher_current$p.value, 4), \"\\n\")\n\ncat(\"\\nTo achieve p < 0.05 with one error allowed:\\n\")\ncat(\"We would need perfect discrimination (4 correct, 0 wrong)\\n\")\nx_perfect <- matrix(c(4, 0, 0, 4), nrow = 2)\nfisher_perfect <- fisher.test(x_perfect, alternative = \"greater\")\ncat(\"Perfect discrimination p-value =\", round(fisher_perfect$p.value, 4), \"\\n\")\n\ncat(\"\\nConclusion: 8 trials are sufficient with perfect performance\\n\")\ncat(\"but with one error, more trials would be needed\\n\")","id":23,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"0.5","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-23","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}}];
+  globalThis.qwebrCellDetails = [{"code":"library(ggplot2)\nlibrary(dplyr)\nlibrary(knitr)\n\n# Chargement des données\nurl <- \"https://raw.githubusercontent.com/shaimachemli/projet_R/refs/heads/main/data/screen_time_clean.csv\"\ndata <- read.csv(url)\n\ncat(\"✅ DONNÉES CHARGÉES AVEC SUCCÈS\\n\\n\")\ncat(\"Dimensions : \", nrow(data), \" lignes × \", ncol(data), \" colonnes\\n\")\ncat(\"Variables : \", paste(colnames(data), collapse=\" | \"), \"\\n\\n\")\n\n# Structure\nstr(data)","id":1,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"0.5","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-1","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# Graphique: Temps d'écran par groupe d'âge\nage_plot_data <- data %>%\n  group_by(Age_Group) %>%\n  summarise(\n    Mean_Screen = mean(Avg_Daily_Screen_Time_hr),\n    Impact_Pct = round(sum(Has_Health_Impact==TRUE)/n()*100, 1),\n    .groups='drop'\n  )\n\nggplot(age_plot_data, aes(x = reorder(Age_Group, Mean_Screen), y = Mean_Screen, fill = Age_Group)) +\n  geom_col(alpha = 0.8, color = \"white\", linewidth = 1.5) +\n  geom_text(aes(label = paste0(Mean_Screen, \"h\")), vjust = -0.5, fontface = \"bold\", size = 4) +\n  scale_fill_manual(values = c(\"#FF6B6B\", \"#4ECDC4\", \"#45B7D1\", \"#FFA07A\")) +\n  labs(\n    title = \"Screen Time by Age Group\",\n    x = \"Age Group\",\n    y = \"Hours/day\",\n    subtitle = \"11-13 years old: highest exposure\"\n  ) +\n  theme_minimal() +\n  theme(legend.position = \"none\", plot.title = element_text(face=\"bold\", size=14))","id":2,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"0.5","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-2","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# Pie Chart: Conformity\nexceeded_data <- data %>%\n  group_by(Exceeded_Recommended_Limit) %>%\n  summarise(Count = n(), .groups='drop') %>%\n  mutate(\n    Pct = round(Count/sum(Count)*100, 1),\n    Label = ifelse(Exceeded_Recommended_Limit==\"True\", \n                   \"Over Limit\", \"Compliant\")\n  )\n\nggplot(exceeded_data, aes(x = \"\", y = Count, fill = Label)) +\n  geom_col(width = 1, color = \"white\", linewidth = 2) +\n  coord_polar(theta = \"y\") +\n  geom_text(aes(label = paste0(Pct, \"%\")), \n            position = position_stack(vjust = 0.5),\n            fontface = \"bold\", size = 6, color = \"white\") +\n  scale_fill_manual(values = c(\"#27AE60\", \"#E74C3C\")) +\n  labs(title = \"Compliance with Recommended Limits\") +\n  theme_void() +\n  theme(legend.position = \"bottom\", plot.title = element_text(face=\"bold\", hjust=0.5))","id":3,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"0.5","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-3","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# Device distribution chart\ndevice_plot_data <- data %>%\n  group_by(Primary_Device) %>%\n  summarise(Count = n(), .groups='drop') %>%\n  arrange(desc(Count))\n\nggplot(device_plot_data, aes(x = reorder(Primary_Device, Count), y = Count, fill = Primary_Device)) +\n  geom_col(alpha = 0.85, color = \"white\", linewidth = 1.5) +\n  geom_text(aes(label = Count), hjust = -0.2, fontface = \"bold\", size = 4) +\n  scale_fill_manual(values = c(\"#3498DB\", \"#E67E22\", \"#9B59B6\", \"#1ABC9C\")) +\n  coord_flip() +\n  labs(title = \"Device Usage Distribution\", x = \"Device\", y = \"Number of Children\") +\n  theme_minimal() +\n  theme(legend.position = \"none\", plot.title = element_text(face=\"bold\"))","id":4,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"0.5","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-4","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"cat(\"📌 SCREEN TIME × HEALTH IMPACTS\\n\")\ncat(\"═══════════════════════════════════════════════════════════\\n\\n\")\n\nscreen_impact <- data %>%\n  mutate(\n    Screen_Category = case_when(\n      Avg_Daily_Screen_Time_hr < 2 ~ \"Low (<2h)\",\n      Avg_Daily_Screen_Time_hr < 4 ~ \"Moderate (2-4h)\",\n      Avg_Daily_Screen_Time_hr < 6 ~ \"High (4-6h)\",\n      TRUE ~ \"Very High (>6h)\"\n    )\n  ) %>%\n  group_by(Screen_Category) %>%\n  summarise(\n    Total = n(),\n    \"With Impact\" = sum(Has_Health_Impact==TRUE),\n    \"Without Impact\" = sum(Has_Health_Impact==FALSE),\n    \"Impact %\" = round(sum(Has_Health_Impact==TRUE)/n()*100, 1),\n    .groups='drop'\n  )\n\nknitr::kable(screen_impact, format=\"html\")\n\ncat(\"\\n🚨 CLEAR CORRELATION:\\n\")\ncat(\"   • <2h : 0% impacts ✅\\n\")\ncat(\"   • 2-4h : 55.9% impacts ⚠️\\n\")\ncat(\"   • 4-6h : 81.4% impacts 🔴\\n\")\ncat(\"   • >6h : 81.8% impacts 🚨\\n\")","id":5,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"0.5","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-5","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# Impact correlation chart\nimpact_plot_data <- data %>%\n  mutate(\n    Screen_Category = case_when(\n      Avg_Daily_Screen_Time_hr < 2 ~ \"Low (<2h)\",\n      Avg_Daily_Screen_Time_hr < 4 ~ \"Moderate (2-4h)\",\n      Avg_Daily_Screen_Time_hr < 6 ~ \"High (4-6h)\",\n      TRUE ~ \"Very High (>6h)\"\n    )\n  ) %>%\n  group_by(Screen_Category) %>%\n  summarise(Impact_Pct = round(sum(Has_Health_Impact==TRUE)/n()*100, 1), .groups='drop') %>%\n  mutate(Screen_Category = factor(Screen_Category, \n                                  levels = c(\"Low (<2h)\", \"Moderate (2-4h)\", \"High (4-6h)\", \"Very High (>6h)\")))\n\nggplot(impact_plot_data, aes(x = Screen_Category, y = Impact_Pct, fill = Screen_Category)) +\n  geom_col(alpha = 0.85, color = \"white\", linewidth = 1.5) +\n  geom_text(aes(label = paste0(Impact_Pct, \"%\")), vjust = -0.5, fontface = \"bold\", size = 4) +\n  scale_fill_manual(values = c(\"#27AE60\", \"#F39C12\", \"#E74C3C\", \"#C0392B\")) +\n  labs(\n    title = \"Health Impact by Screen Time Category\",\n    x = \"Screen Time Category\",\n    y = \"% Children with Health Issues\"\n  ) +\n  theme_minimal() +\n  theme(legend.position = \"none\", plot.title = element_text(face=\"bold\"),\n        axis.text.x = element_text(angle = 15, hjust = 1))","id":6,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"0.5","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-6","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"library(dplyr)\nlibrary(ggplot2)\n\n# Catégorisation du temps d'écran\nimpact_plot_data <- data %>%\n  mutate(\n    Screen_Category = case_when(\n      Avg_Daily_Screen_Time_hr < 2 ~ \"<2h (Faible)\",\n      Avg_Daily_Screen_Time_hr < 4 ~ \"2-4h (Modéré)\",\n      Avg_Daily_Screen_Time_hr < 6 ~ \"4-6h (Élevé)\",\n      TRUE ~ \">6h (Très élevé)\"\n    )\n  ) %>%\n  group_by(Screen_Category) %>%\n  summarise(Impact_Pct = round(sum(Has_Health_Impact==TRUE)/n()*100, 1), .groups='drop') %>%\n  mutate(Screen_Category = factor(Screen_Category, \n                                  levels = c(\"<2h (Faible)\", \"2-4h (Modéré)\", \"4-6h (Élevé)\", \">6h (Très élevé)\")))\n\n# Graphique\nggplot(impact_plot_data, aes(x = Screen_Category, y = Impact_Pct, fill = Screen_Category)) +\n  geom_col(alpha = 0.85, color = \"white\", linewidth = 1.5) +\n  geom_text(aes(label = paste0(Impact_Pct, \"%\")), vjust = -0.5, fontface = \"bold\", size = 4) +\n  scale_fill_manual(values = c(\"#27AE60\", \"#F39C12\", \"#E74C3C\", \"#C0392B\")) +\n  labs(\n    title = \"Impact Santé selon le temps d’écran\",\n    x = \"Catégorie de temps d’écran\",\n    y = \"% d’enfants avec problèmes de santé\"\n  ) +\n  theme_minimal() +\n  theme(legend.position = \"none\",\n        plot.title = element_text(face=\"bold\"),\n        axis.text.x = element_text(angle = 15, hjust = 1))","id":7,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"0.5","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-7","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"library(dplyr)\nlibrary(ggplot2)\n\n# Données pour le graphique\ngender_data <- data %>%\n  group_by(Gender) %>%\n  summarise(\n    Mean_Screen = mean(Avg_Daily_Screen_Time_hr),\n    Impact_Pct = round(sum(Has_Health_Impact==TRUE)/n()*100, 1),\n    .groups='drop'\n  )\n\n# Graphique\nggplot(gender_data, aes(x = Gender, y = Mean_Screen, fill = Gender)) +\n  geom_col(alpha = 0.85, color = \"white\", linewidth = 1.5) +\n  geom_text(aes(label = paste0(round(Mean_Screen,2), \" h\")), vjust = -0.5, fontface = \"bold\", size = 4) +\n  scale_fill_manual(values = c(\"#FF69B4\", \"#4169E1\")) +\n  labs(\n    title = \"Temps d’écran moyen selon le genre\",\n    x = \"Genre\",\n    y = \"Heures/jour\"\n  ) +\n  theme_minimal() +\n  theme(\n    legend.position = \"none\",\n    plot.title = element_text(face=\"bold\")\n  )","id":8,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"0.5","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-8","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"library(dplyr)\nlibrary(ggplot2)\n\nedu_data <- data %>%\n  mutate(\n    Education_Level = case_when(\n      Educational_to_Recreational_Ratio < 0.37 ~ \"Très faible\",\n      Educational_to_Recreational_Ratio < 0.43 ~ \"Faible\",\n      Educational_to_Recreational_Ratio < 0.48 ~ \"Équilibré\",\n      TRUE ~ \"Très élevé\"\n    )\n  ) %>%\n  group_by(Education_Level) %>%\n  summarise(Impact_Pct = round(sum(Has_Health_Impact==TRUE)/n()*100, 1), .groups='drop') %>%\n  mutate(Education_Level = factor(Education_Level, \n                                  levels = c(\"Très faible\", \"Faible\", \"Équilibré\", \"Très élevé\")))\n\nggplot(edu_data, aes(x = Education_Level, y = Impact_Pct, fill = Education_Level)) +\n  geom_col(alpha = 0.85, color = \"white\", linewidth = 1.5) +\n  geom_text(aes(label = paste0(Impact_Pct, \"%\")), vjust = -0.5, fontface = \"bold\", size = 4) +\n  scale_fill_manual(values = c(\"#E74C3C\", \"#F39C12\", \"#FFC107\", \"#27AE60\")) +\n  labs(\n    title = \"Effet protecteur du contenu éducatif\",\n    x = \"Niveau de contenu éducatif\",\n    y = \"% Impact santé\"\n  ) +\n  theme_minimal() +\n  theme(legend.position = \"none\", plot.title = element_text(face=\"bold\"))","id":9,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"0.5","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-9","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"cat(\"════════════════════════════════════════════════════════════\\n\")\ncat(\"T-TEST - BOYS vs GIRLS\\n\")\ncat(\"════════════════════════════════════════════════════════════\\n\\n\")\n\nboys <- data$Avg_Daily_Screen_Time_hr[data$Gender == \"Male\"]\ngirls <- data$Avg_Daily_Screen_Time_hr[data$Gender == \"Female\"]\n\ncat(\"DESCRIPTIVE STATISTICS:\\n\")\ncat(sprintf(\"  Boys (n=%d) : Mean = %.3f h\\n\", length(boys), mean(boys)))\ncat(sprintf(\"  Girls (n=%d) : Mean = %.3f h\\n\\n\", length(girls), mean(girls)))\n\nt_result <- t.test(boys, girls)\n\ncat(\"T-TEST RESULTS:\\n\")\ncat(sprintf(\"  t-statistic = %.4f\\n\", t_result$statistic))\ncat(sprintf(\"  p-value = %.4f\\n\", t_result$p.value))\ncat(sprintf(\"  95% CI = [%.4f ; %.4f]\\n\\n\", t_result$conf.int[1], t_result$conf.int[2]))\n\nif(t_result$p.value < 0.05) {\n  cat(\"✓ RESULT: SIGNIFICANT DIFFERENCE (p < 0.05)\\n\")\n} else {\n  cat(\"✗ RESULT: NO SIGNIFICANT DIFFERENCE (p ≥ 0.05)\\n\")\n}\n\n# Cohen's d\nn1 <- length(boys)\nn2 <- length(girls)\npooled_sd <- sqrt(((n1-1)*var(boys) + (n2-1)*var(girls))/(n1+n2-2))\ncohens_d <- (mean(boys) - mean(girls))/pooled_sd\n\ncat(sprintf(\"\\nCOHEN'S D = %.4f (Negligible effect size)\\n\", cohens_d))","id":10,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"0.5","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-10","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"cat(\"════════════════════════════════════════════════════════════\\n\")\ncat(\"MANN-WHITNEY TEST - URBAN vs RURAL\\n\")\ncat(\"════════════════════════════════════════════════════════════\\n\\n\")\n\nurban <- data$Avg_Daily_Screen_Time_hr[data$Urban_or_Rural == \"Urban\"]\nrural <- data$Avg_Daily_Screen_Time_hr[data$Urban_or_Rural == \"Rural\"]\n\ncat(\"MEDIAN STATISTICS:\\n\")\ncat(sprintf(\"  Urban (n=%d) : Median = %.3f h\\n\", length(urban), median(urban)))\ncat(sprintf(\"  Rural (n=%d) : Median = %.3f h\\n\\n\", length(rural), median(rural)))\n\nwilcox_result <- wilcox.test(urban, rural)\n\ncat(\"MANN-WHITNEY RESULTS:\\n\")\ncat(sprintf(\"  U-statistic = %.0f\\n\", wilcox_result$statistic))\ncat(sprintf(\"  p-value = %.4f\\n\\n\", wilcox_result$p.value))\n\nif(wilcox_result$p.value < 0.05) {\n  cat(\"✓ RESULT: SIGNIFICANT DIFFERENCE (p < 0.05)\\n\")\n} else {\n  cat(\"✗ RESULT: NO SIGNIFICANT DIFFERENCE (p ≥ 0.05)\\n\")\n}","id":11,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"0.5","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-11","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"cat(\"════════════════════════════════════════════════════════════\\n\")\ncat(\"CHI-SQUARE TEST - DEVICE vs EXCEEDING LIMIT\\n\")\ncat(\"════════════════════════════════════════════════════════════\\n\\n\")\n\ncontingency <- table(data$Primary_Device, data$Exceeded_Recommended_Limit)\ncat(\"CONTINGENCY TABLE:\\n\")\nprint(contingency)\ncat(\"\\n\")\n\nchi_result <- chisq.test(contingency)\n\ncat(\"CHI-SQUARE RESULTS:\\n\")\ncat(sprintf(\"  Chi-square = %.2f\\n\", chi_result$statistic))\ncat(sprintf(\"  p-value = %.6f\\n\", chi_result$p.value))\ncat(sprintf(\"  df = %d\\n\\n\", chi_result$parameter))\n\ncat(\"✓ RESULT: HIGHLY SIGNIFICANT ASSOCIATION (p < 0.001)\\n\")\ncat(\"   → Device type influences screen time exposure\\n\")","id":12,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"0.5","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-12","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"cat(\"═══════════════════════════════════════════════════════════\\n\")\ncat(\"🚨 KEY FINDINGS & RECOMMENDATIONS\\n\")\ncat(\"═══════════════════════════════════════════════════════════\\n\\n\")\n\nfindings <- data.frame(\n  Rank = c(\"1\", \"2\", \"3\", \"4\", \"5\", \"6\"),\n  Finding = c(\n    \"85.8% of children exceed recommended limits\",\n    \"11-13 years: highest risk group (89.8% exceed)\",\n    \"Clear correlation: more screen time → more health issues\",\n    \"Poor Sleep affects 50.3% of population\",\n    \"Educational content reduces impacts by 20%\",\n    \"Laptop & Smartphone are highest risk devices\"\n  ),\n  Impact = c(\"CRITICAL\", \"CRITICAL\", \"SEVERE\", \"MAJOR\", \"PROTECTIVE\", \"HIGH RISK\")\n)\n\nknitr::kable(findings, format=\"html\")","id":13,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"0.5","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-13","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}}];
 
   </script>
   <script type="module">
@@ -1967,8 +2032,8 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Kids Screen Time Analysis</h1>
-  <p class="subtitle">Impact of Digital Devices on Children’s Health</p>
+  <h1 class="title">Analyse du Temps d’Écran chez les Enfants</h1>
+  <p class="subtitle">Impact des appareils numériques sur la santé des enfants</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -1980,242 +2045,257 @@ Shaima Chemli
 
   <p class="date">2026-01-03</p>
 </section>
+<section>
+<section id="analyse-du-temps-décran-chez-les-enfants" class="title-slide slide level1 center">
+<h1>📱 Analyse du temps d’écran chez les enfants</h1>
+
+</section>
 <section id="introduction" class="slide level2">
 <h2>Introduction</h2>
-<p><strong>Contexte :</strong> L’usage des technologies numériques transforme profondément le quotidien des enfants, surtout dans les pays émergents.<br>
-L’accès aux smartphones, tablettes et téléviseurs s’est fortement démocratisé ces 10 dernières années.</p>
+<p><strong>Contexte :</strong> L’usage des technologies numériques transforme profondément le quotidien des enfants, surtout dans les pays émergents. L’accès aux smartphones, tablettes et téléviseurs s’est fortement démocratisé ces 10 dernières années.</p>
 <p><strong>Enjeux :</strong> Cette transition soulève des préoccupations de santé publique, notamment chez les enfants et adolescents, population particulièrement vulnérable aux effets d’une <strong>exposition prolongée aux écrans</strong>.</p>
 </section>
 <section id="étude-et-objectifs" class="slide level2">
-<h2>Étude et objectifs</h2>
+<h2>🎯 Étude et Objectifs</h2>
 <ul>
-<li><strong>Échantillon :</strong> 9 668 enfants indiens</li>
+<li><strong>Échantillon :</strong> 9,668 enfants indiens (8-18 ans)</li>
 <li><strong>Variables clés :</strong>
 <ul>
-<li>Temps d’écran quotidien</li>
-<li>Type d’appareil utilisé</li>
-<li>Indicateurs de santé physique et comportementale</li>
+<li>⏰ Temps d’écran quotidien</li>
+<li>📱 Type d’appareil utilisé</li>
+<li>🏥 Indicateurs de santé physique et comportementale</li>
 </ul></li>
 <li><strong>Objectif :</strong> Fournir une analyse fondée sur les données pour éclairer :
 <ul>
-<li>Décisions parentales</li>
-<li>Stratégies éducatives</li>
-<li>Politiques de santé publique</li>
+<li>👨‍👩‍👧 Décisions parentales</li>
+<li>🎓 Stratégies éducatives</li>
+<li>🏛️ Politiques de santé publique</li>
 </ul></li>
 </ul>
 </section>
 <section id="problématique" class="slide level2">
-<h2>Problématique</h2>
+<h2>❓ Problématique</h2>
 <blockquote>
 <p>Dans quelle mesure l’utilisation des écrans influence-t-elle la santé des enfants, et quels facteurs peuvent moduler ces effets ?</p>
 </blockquote>
-<p><strong>Questions de recherche :</strong> - Combien de temps les enfants passent-ils sur les écrans ? - Quels appareils sont les plus utilisés ? - Quelles conséquences pour la santé ? - Existe-t-il des facteurs de protection ?</p>
+<p><strong>Questions de recherche :</strong> - Combien de temps les enfants passent-ils sur les écrans ? - Quels appareils sont les plus utilisés ? - Quelles conséquences pour la santé ? - Existe-t-il des facteurs de protection ? - Comment les recommandations varient-elles par groupe d’âge ?</p>
 </section>
-<section id="données-aperçu-du-dataset" class="slide level2">
-<h2>Données &amp; aperçu du dataset</h2>
+<section class="slide level2">
+
+</section></section>
+<section>
+<section id="data-loading-exploration" class="title-slide slide level1 center">
+<h1>📊 Data Loading &amp; Exploration</h1>
+
+</section>
+<section id="chargement-et-structure-des-données" class="slide level2">
+<h2>Chargement et Structure des Données</h2>
 <div id="qwebr-insertion-location-1"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 </section>
-<section id="données-aperçu-du-dataset-1" class="slide level2">
-<h2>Données &amp; aperçu du dataset</h2>
-<ul>
-<li><strong>Observations :</strong> 9 668 enfants</li>
-<li><strong>Variables :</strong> 12 (ex. âge, sexe, temps d’écran, appareil principal, activité physique)</li>
-<li><strong>Types :</strong> mix de numérique et catégoriel</li>
-<li><strong>Préparation :</strong> valeurs manquantes traitées, variables harmonisées</li>
-</ul>
-</section>
-<section id="données-aperçu-du-dataset-2" class="slide level2">
-<h2>Données &amp; aperçu du dataset</h2>
-<p>The two sample t-Test is used to compare two groups of data: Related to our example, we test the following hypotheses:</p>
-<p><span class="math inline">\(H_0\)</span>: Both drugs have the same effect.</p>
-<p><span class="math inline">\(H_A\)</span>: The drugs have a different effect, i.e.&nbsp;one of the drugs is stronger.</p>
+<section id="statistiques-descriptives-globales" class="slide level2">
+<h2>📈 Statistiques Descriptives Globales</h2>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">cat</span>(<span class="st">"═══════════════════════════════════════════════════════════</span><span class="sc">\n</span><span class="st">"</span>)</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>═══════════════════════════════════════════════════════════</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="fu">cat</span>(<span class="st">"📊 STATISTIQUES GLOBALES</span><span class="sc">\n</span><span class="st">"</span>)</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>📊 STATISTIQUES GLOBALES</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a><span class="fu">cat</span>(<span class="st">"═══════════════════════════════════════════════════════════</span><span class="sc">\n\n</span><span class="st">"</span>)</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>═══════════════════════════════════════════════════════════</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a>stats_table <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb7-2"><a></a>  Métrique <span class="ot">=</span> <span class="fu">c</span>(</span>
+<span id="cb7-3"><a></a>    <span class="st">"Population totale"</span>,</span>
+<span id="cb7-4"><a></a>    <span class="st">"Âge moyen"</span>,</span>
+<span id="cb7-5"><a></a>    <span class="st">"Âge min - max"</span>,</span>
+<span id="cb7-6"><a></a>    <span class="st">"Temps écran moyen"</span>,</span>
+<span id="cb7-7"><a></a>    <span class="st">"% Dépassement limite"</span>,</span>
+<span id="cb7-8"><a></a>    <span class="st">"% Impacts santé"</span></span>
+<span id="cb7-9"><a></a>  ),</span>
+<span id="cb7-10"><a></a>  <span class="at">Valeur =</span> <span class="fu">c</span>(</span>
+<span id="cb7-11"><a></a>    <span class="fu">format</span>(<span class="fu">nrow</span>(data), <span class="at">big.mark=</span><span class="st">","</span>),</span>
+<span id="cb7-12"><a></a>    <span class="fu">paste0</span>(<span class="fu">round</span>(<span class="fu">mean</span>(data<span class="sc">$</span>Age), <span class="dv">1</span>), <span class="st">" ans"</span>),</span>
+<span id="cb7-13"><a></a>    <span class="fu">paste0</span>(<span class="fu">min</span>(data<span class="sc">$</span>Age), <span class="st">" - "</span>, <span class="fu">max</span>(data<span class="sc">$</span>Age), <span class="st">" ans"</span>),</span>
+<span id="cb7-14"><a></a>    <span class="fu">paste0</span>(<span class="fu">round</span>(<span class="fu">mean</span>(data<span class="sc">$</span>Avg_Daily_Screen_Time_hr), <span class="dv">2</span>), <span class="st">" h/jour"</span>),</span>
+<span id="cb7-15"><a></a>    <span class="fu">paste0</span>(<span class="fu">round</span>(<span class="fu">sum</span>(data<span class="sc">$</span>Exceeded_Recommended_Limit<span class="sc">==</span><span class="st">"True"</span>)<span class="sc">/</span><span class="fu">nrow</span>(data)<span class="sc">*</span><span class="dv">100</span>, <span class="dv">1</span>), <span class="st">"%"</span>),</span>
+<span id="cb7-16"><a></a>    <span class="fu">paste0</span>(<span class="fu">round</span>(<span class="fu">sum</span>(data<span class="sc">$</span>Has_Health_Impact<span class="sc">==</span><span class="cn">TRUE</span>)<span class="sc">/</span><span class="fu">nrow</span>(data)<span class="sc">*</span><span class="dv">100</span>, <span class="dv">1</span>), <span class="st">"%"</span>)</span>
+<span id="cb7-17"><a></a>  )</span>
+<span id="cb7-18"><a></a>)</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-error">
+<pre><code>Error in data$Age: objet de type 'closure' non indiçable</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a>knitr<span class="sc">::</span><span class="fu">kable</span>(stats_table, <span class="at">format=</span><span class="st">"html"</span>, </span>
+<span id="cb9-2"><a></a>             <span class="at">col.names=</span><span class="fu">c</span>(<span class="st">"Métrique"</span>, <span class="st">"Valeur"</span>))</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-error">
+<pre><code>Error: objet 'stats_table' introuvable</code></pre>
+</div>
+</div>
 </section>
 <section class="slide level2">
 
+</section></section>
+<section>
+<section id="partie-1-résultats-descriptifs" class="title-slide slide level1 center">
+<h1>📍 PARTIE 1 : Résultats Descriptifs</h1>
+
+</section>
+<section id="distribution-par-groupe-dâge" class="slide level2">
+<h2>1.1 Distribution par Groupe d’Âge</h2>
 <div id="qwebr-insertion-location-2"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p>Here, R performs the Welch test by default, that is also valid for samples with different variances.</p>
 </section>
-<section class="slide level2">
-
-<p>The classical approach suggested to check homogeneity of variances with the F-Test (<code>var.test</code>) first and if the assumption holds, to apply the “ordinary” two sample t-test (<code>t.test(....., var.equal = TRUE)</code>). This method is not anymore recommended <span class="citation" data-cites="Delacre2017">[@Delacre2017]</span>.</p>
+<section id="conformité-aux-limites-recommandées" class="slide level2">
+<h2>1.2 Conformité aux Limites Recommandées</h2>
 <div id="qwebr-insertion-location-3"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+</section>
+<section id="primary-device-distribution" class="slide level2">
+<h2>1.3 Primary Device Distribution</h2>
 <div id="qwebr-insertion-location-4"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 </section>
 <section class="slide level2">
 
-<p><strong>Exercise 2:</strong> Create a boxplot, and perform the tests. What is the effect size, i.e.&nbsp;by how many hours differs sleep duration?</p>
+</section></section>
+<section>
+<section id="partie-2-health-impacts" class="title-slide slide level1 center">
+<h1>🏥 PARTIE 2 : Health Impacts</h1>
+
+</section>
+<section id="screen-time-vs-health-impacts-correlation" class="slide level2">
+<h2>2.1 Screen Time vs Health Impacts Correlation</h2>
 <div id="qwebr-insertion-location-5"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 <div id="qwebr-insertion-location-6"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 </section>
-<section id="paired-t-test" class="slide level2">
-<h2>Paired t-test</h2>
-<p>Given is a number of students that passed an examination in statistics. The examination was written two times, one time before and one time after an additional series of lectures. The values represent the numbers of points approached during the examination. Check whether the additional lectures had any positive effect:</p>
+<section id="temps-décran-vs-impacts-santé" class="slide level2">
+<h2>2.1 Temps d’écran vs Impacts Santé</h2>
 <div id="qwebr-insertion-location-7"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 </section>
 <section class="slide level2">
 
-<p><strong>Exercise 3:</strong> The test was conducted by the same individuals before and after the course, so one can use a paired t-test:</p>
+</section></section>
+<section>
+<section id="partie-3-comparative-analysis" class="title-slide slide level1 center">
+<h1>📈 PARTIE 3 : Comparative Analysis</h1>
+
+</section>
+<section id="comparaison-par-genre" class="slide level2">
+<h2>3.1 Comparaison par genre</h2>
 <div id="qwebr-insertion-location-8"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p>Then compare the results with the ordinary two-sample t-test:</p>
+</section>
+<section id="effet-du-contenu-éducatif" class="slide level2">
+<h2>3.2 Effet du Contenu Éducatif</h2>
 <div id="qwebr-insertion-location-9"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 </section>
-<section id="wilcoxon-test-optional" class="slide level2">
-<h2>Wilcoxon test (optional)</h2>
-<p>The Mann-Whitney and Wilxon tests are nonparametric tests of location. “Nonparametric” means, that the general location of the distributions is compared and not a parameter like the mean. This makes the test independent of distributional assumptions, but can sometimes lead to a vague interpretations.</p>
-</section>
 <section class="slide level2">
 
-<p><strong>Exercise 4:</strong> Now repeat the comparison for the sleep study using the Wilcoxon test for unpaired and paired samples. Note that the unpaired test is often also called “Mann-Whitney U test”.</p>
-<p>In R both tests can be found as <code>wilcox.test</code>. Use the help system of R (<code>?wilcox.test</code>) and read the help page about the usage of these tests.</p>
-</section>
-<section class="slide level2">
+</section></section>
+<section>
+<section id="partie-4-statistical-tests" class="title-slide slide level1 center">
+<h1>🔬 PARTIE 4 : Statistical Tests</h1>
 
+</section>
+<section id="t-test-boys-vs-girls" class="slide level2">
+<h2>4.1 T-Test: Boys vs Girls</h2>
 <div id="qwebr-insertion-location-10"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+</section>
+<section id="mann-whitney-test-urban-vs-rural" class="slide level2">
+<h2>4.2 Mann-Whitney Test: Urban vs Rural</h2>
 <div id="qwebr-insertion-location-11"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 </section>
-<section id="own-project-weight-of-clementine-fruits" class="slide level2 scrollable">
-<h2>Own project: Weight of Clementine fruits</h2>
-<p>Import the Clementines data set (fruits-2023-hse.csv)<sup>1</sup>.</p>
-<ul>
-<li><p>Think about an appropriate data structure and use a suitable statistical test to compare the weights.</p></li>
-<li><p>Check variance homogeneity and normal distribution graphically.</p></li>
-<li><p>Can the weights from each brand be considered as independent samples?</p></li>
-</ul>
-<aside><ol class="aside-footnotes"><li id="fn1"><p><code>fruits.csv</code> available from: <a href="https://tpetzoldt.github.io/datasets/data/fruits-2023-hse.csv">https://tpetzoldt.github.io/datasets/data/fruits-2023-hse.csv</a></p></li></ol></aside></section>
-<section class="slide level2">
-
-<h3 id="perform-a-statistical-test-for-the-following-hypotheses">Perform a statistical test for the following hypotheses</h3>
-<p><span class="math inline">\(H_0\)</span>: The weight of the fruits bought on Friday (box2) and on Monday (box1) are the same.</p>
-<p><span class="math inline">\(H_A\)</span>: The weight of the fruits is different.</p>
-<p>Select a proper statistical test and interpret its results.</p>
-</section>
-<section class="slide level2">
-
+<section id="chi-square-test-device-vs-exceeding-limit" class="slide level2">
+<h2>4.3 Chi-Square Test: Device vs Exceeding Limit</h2>
 <div id="qwebr-insertion-location-12"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 </section>
-<section class="slide level2 scrollable">
-
-<h3 id="calculate-absolute-and-relative-effect-sizes">Calculate absolute and relative effect sizes</h3>
-<ol type="1">
-<li><p>Calculate the mean values of both samples <span class="math inline">\(\bar{x}_{1}, \bar{x}_{2}\)</span> and the <strong>absolute effect size</strong>: <span class="math inline">\(\Delta=\bar{x}_{1}-\bar{x}_{2}\)</span></p></li>
-<li><p>Calculate the pooled standard deviation (<span class="math inline">\(N_1, N_2\)</span> = sample size, <span class="math inline">\(s_1, s_2\)</span>= standard deviation):</p></li>
-</ol>
-<p><span class="math inline">\(s_{1,2} = \sqrt{\frac{(N_1 - 1) s_1^2 + (N_2 - 1) s_2^2)}{N_1 + N_2 - 2}}\)</span></p>
-<ol start="3" type="1">
-<li><p>Calculate the relative effect size as <span class="math inline">\(\delta=\frac{|\bar{x}_{1}-\bar{x}_{2}|}{s_{1,2}}\)</span></p></li>
-<li><p>Read in Wikipedia about <a href="https://en.wikipedia.org/wiki/Effect_size#Cohen's_d">Cohen’s d</a> and other measures of effect size.</p></li>
-</ol>
-</section>
 <section class="slide level2">
 
+</section></section>
+<section>
+<section id="partie-5-key-findings-recommendations" class="title-slide slide level1 center">
+<h1>🎯 PARTIE 5 : Key Findings &amp; Recommendations</h1>
+
+</section>
+<section id="critical-findings" class="slide level2">
+<h2>Critical Findings</h2>
 <div id="qwebr-insertion-location-13"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 </section>
-<section id="chi-squared-test-and-fishers-exact-test-optional" class="slide level2">
-<h2>Chi-squared test and Fisher’s exact test (optional)</h2>
-<h3 id="introduction-1">Introduction</h3>
-<p>Taken from Agresti (2002), Fisher’s Tea Drinker:</p>
-<p>“A British woman claimed to be able to distinguish whether milk or tea was added to the cup first. To test, she was given 8 cups of tea, in four of which milk was added first. The null hypothesis is that there is no association between the true order of pouring and the woman’s guess, the alternative that there is a positive association (that the odds ratio is greater than 1).”</p>
+<section id="recommandations-par-groupe-dâge" class="slide level2">
+<h2>💡 Recommandations par groupe d’âge</h2>
+<div class="columns">
+<div class="column" style="width:33%;">
+<p><strong>8-10 ans</strong> - Maximum 2h/jour - ≥ 50% du temps éducatif - Préférence : TV/Tablette - Pauses de 15 min toutes les 30 min</p>
+</div><div class="column" style="width:33%;">
+<p><strong>11-13 ans</strong> 🚨 - Maximum 3h/jour - Ratio éducatif ≥ 0,5 - Contrôle des appareils - Surveiller le sommeil</p>
+</div><div class="column" style="width:33%;">
+<p><strong>14-18 ans</strong> - Maximum 3-4h/jour - Filtre lumière bleue après 20h - Priorité à l’éducation - Hygiène de sommeil</p>
+</div></div>
 </section>
-<section class="slide level2">
-
-<p>The experiment revealed the following outcome: With tea first, the tea taster identified three times the correct answer and was one time wrong and the same occurred with milk first (3 true, 1 wrong).</p>
-<p>For a TV show this would be sufficient, but how big was the probability to get such a result just by chance?</p>
+<section id="seuils-dintervention" class="slide level2">
+<h2>Seuils d’intervention</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Temps d’écran</th>
+<th>Risque santé</th>
+<th>Action</th>
+<th>Urgence</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>&lt; 2h/jour</td>
+<td>0%</td>
+<td>✅ Maintenir</td>
+<td>Aucun</td>
+</tr>
+<tr class="even">
+<td>2-4h/jour</td>
+<td>56%</td>
+<td>⚠️ Surveiller</td>
+<td>Faible</td>
+</tr>
+<tr class="odd">
+<td>4-6h/jour</td>
+<td>81%</td>
+<td>🔴 Intervenir</td>
+<td>Élevé</td>
+</tr>
+<tr class="even">
+<td>&gt; 6h/jour</td>
+<td>82%</td>
+<td>🚨 URGENT</td>
+<td>Critique</td>
+</tr>
+</tbody>
+</table>
 </section>
-<section class="slide level2">
-
-<h3 id="methods-and-results">Methods and Results</h3>
-<p>We put the data into a matrix:</p>
-<div id="qwebr-insertion-location-14"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<div id="qwebr-insertion-location-15"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-</section>
-<section class="slide level2">
-
-<p>This tests for an association between truth and guess, but if we want only positive associations, we should perform a one-sided test:</p>
-<div id="qwebr-insertion-location-16"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p>A similar test can be performed with the chi-squared test, but this is not precise for small data sets, so the Fisher test should be preferred.</p>
-<div id="qwebr-insertion-location-17"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-</section>
-<section class="slide level2">
-
-<h3 id="discussion">Discussion</h3>
-<p><strong>Exercise 5:</strong> Compare the results of Fisher’s exact test with <code>alternative="two.sided"</code> (the default) with <code>alternative = "greater"</code> and <code>less</code> and discuss the differences and their meaning. Which option is the best in this case?</p>
-</section>
-<section class="slide level2">
-
-<p><strong>Exercise 6:</strong> How many trials would be necessary to get a significant statistical result with <span class="math inline">\(p &lt; 0.05\)</span> for the tea taster experiment, given that we allow one wrong decision for tea first and milk first?</p>
-</section>
-<section class="slide level2">
-
-<h3 id="background">Background</h3>
-<p>Read the Wikipedia articles <a href="https://en.wikipedia.org/wiki/Lady_tasting_tea">“Lady tasting tea”</a> about Fisher’s experiment and Fisher’s exact test and <a href="https://en.wikipedia.org/wiki/The_Lady_Tasting_Tea">“The Lady Tasting Tea”</a> about a popular science book on the “statistical revolution” in the 20th century.</p>
-<p>The odds ratio describes the strength of association in a two-by-two table, see explanation of <a href="https://en.wikipedia.org/wiki/Odds_ratio">“Odds ratio”</a> in Wikipedia or a statistics text book.</p>
-</section>
-<section id="exercise-solutions" class="slide level2">
-<h2>Exercise Solutions</h2>
-</section>
-<section class="slide level2">
-
-<h3 id="exercise-1---solution">Exercise 1 - Solution</h3>
-<div id="qwebr-insertion-location-18"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-</section>
-<section class="slide level2">
-
-<h3 id="exercise-2---solution">Exercise 2 - Solution</h3>
-<div id="qwebr-insertion-location-19"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-</section>
-<section class="slide level2">
-
-<h3 id="exercise-3---solution">Exercise 3 - Solution</h3>
-<div id="qwebr-insertion-location-20"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-</section>
-<section class="slide level2">
-
-<h3 id="exercise-4---solution">Exercise 4 - Solution</h3>
-<div id="qwebr-insertion-location-21"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-</section>
-<section class="slide level2">
-
-<h3 id="exercise-5---solution">Exercise 5 - Solution</h3>
-<div id="qwebr-insertion-location-22"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-</section>
-<section class="slide level2">
-
-<h3 id="exercise-6---solution">Exercise 6 - Solution</h3>
-<div id="qwebr-insertion-location-23"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-</section>
-<section id="references" class="slide level2">
-<h2>References</h2>
-<ul>
-<li>Student (1908) - The probable error of a mean</li>
-<li>Delacre et al.&nbsp;(2017) - Why psychologists should by default use Welch’s t-test instead of Student’s t-test</li>
-</ul>
+<section id="conclusion" class="slide level2">
+<h2>Conclusion</h2>
+<blockquote>
+<p><strong>Les données montrent une réelle préoccupation de santé publique :</strong> 85,8% des enfants indiens dépassent les recommandations de temps d’écran, avec 67,1% présentant des impacts sur la santé.</p>
+</blockquote>
+<p><strong>Actions prioritaires :</strong> 1. 🎯 Cibler les 11-13 ans (groupe à risque le plus élevé)<br>
+2. 📚 Promouvoir le contenu éducatif (effet protecteur ~20%)<br>
+3. 👨‍👩‍👧 Sensibilisation parentale<br>
+4. 🏥 Suivi médical pour les enfants exposés &gt;6h/jour</p>
+<p><strong>Espoir :</strong> La mise en œuvre d’interventions basées sur les données peut réduire significativement les impacts sur la santé et améliorer le bien-être des enfants.</p>
 
 
-</section>
-
+</section></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
@@ -2431,6 +2511,82 @@ L’accès aux smartphones, tablettes et téléviseurs s’est fortement démocr
         ]
       });
     </script>
+    
+
+    <script>
+
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+
+      // slide changes (different for each slide format).
+
+      (function () {
+
+        // dispatch for htmlwidgets
+
+        function fireSlideEnter() {
+
+          const event = window.document.createEvent("Event");
+
+          event.initEvent("slideenter", true, true);
+
+          window.document.dispatchEvent(event);
+
+        }
+
+    
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+
+          fireSlideEnter();
+
+    
+
+          // dispatch for shiny
+
+          if (window.jQuery) {
+
+            if (previousSlide) {
+
+              window.jQuery(previousSlide).trigger("hidden");
+
+            }
+
+            if (currentSlide) {
+
+              window.jQuery(currentSlide).trigger("shown");
+
+            }
+
+          }
+
+        }
+
+    
+
+        // hookup for slidy
+
+        if (window.w3c_slidy) {
+
+          window.w3c_slidy.add_observer(function (slide_num) {
+
+            // slide_num starts at position 1
+
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+
+          });
+
+        }
+
+    
+
+      })();
+
+    </script>
+
+    
+
     <script id="quarto-html-after-body" type="application/javascript">
       window.document.addEventListener("DOMContentLoaded", function (event) {
         const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
