@@ -1,44 +1,26 @@
 
 # projet_R
-Kids Screen Time Analysis - Projet R
-📋 Aperçu du Projet
-Analyse de l'impact du temps d'écran sur la santé des enfants  - Une étude data-driven basée sur un échantillon de 9,668 enfants âgés de 8 à 18 ans.
+# Kids Screen Time Analysis - Projet R
 
-Auteur : Shaima Chemli
-Date : Janvier 2026
-Technologies : R, Quarto, reveal.js, WebR
+## 📋 Aperçu du Projet
+Analyse de l'impact du temps d'écran sur la santé des enfants - Une étude data-driven basée sur un échantillon de 9,668 enfants âgés de 8 à 18 ans.
 
-🎯 Objectifs du Projet
-Ce projet vise à analyser scientifiquement les effets de l'exposition aux écrans numériques sur la santé physique et comportementale des enfants, avec pour finalités :
+**Auteur :** Shaima Chemli  
+**Date :** Janvier 2026  
+**Technologies :** R, Quarto, reveal.js, WebR
 
-Éclairer les décisions parentales concernant l'usage des technologies
+---
 
-Guider les stratégies éducatives dans les écoles
+## 📊 Résultats Clés
+- **85.8%** des enfants dépassent les limites recommandées
+- **67.1%** présentent des impacts sanitaires
+- Groupe le plus à risque : **11-13 ans** (89.8% dépassement)
+- Facteur protecteur : **contenu éducatif** (-20.6% d'impacts)
 
-Informer les politiques publiques de santé
+---
 
-📊 Données Utilisées
-Source : Dataset original et nettoyé
+## 🏗️ Structure du Projet
 
-Échantillon : 9,668 enfants  (8-18 ans)
-
-Fichiers disponibles :
-
-data/screen_time_children.csv - Données brutes
-
-data/screen_time_clean.csv - Données nettoyées et préparées
-
-Variables clés :
-
-Temps d'écran quotidien moyen
-
-Type d'appareil principal
-
-Impacts sanitaires documentés
-
-Ratio contenu éducatif/récréatif
-
-Démographie (âge, genre, localisation)
 
 🏗️ Structure du Projet
 text
