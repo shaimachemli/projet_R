@@ -76,6 +76,8 @@ Kids-Screen-Time-Analysis/
 ├── .gitignore                       # Fichiers ignorés par Git
 ├── README.md                        # Documentation du projet
 └── extensions/                      # Extensions Quarto
+
+
 🔍 Méthodologie d'Analyse
 1. Préparation des Données
 Scripts : 01_load_explore.R, 02_nettoyage.R
