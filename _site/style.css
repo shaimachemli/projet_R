@@ -1,0 +1,36 @@
+
+.reveal h1, .reveal h2 {
+  text-transform: none;
+}
+
+.reveal h1 {
+  color: #667eea;
+  font-size: 2.5em;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.reveal h2 {
+  color: #667eea;
+  font-size: 2em;
+  border-bottom: 3px solid #e74c3c;
+  padding-bottom: 15px;
+  margin-bottom: 30px;
+}
+
+.stat-box {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 25px;
+  border-radius: 10px;
+  margin: 20px 0;
+  font-weight: 600;
+}
+
+.insight {
+  background: #ecf0f1;
+  padding: 15px;
+  border-left: 5px solid #e74c3c;
+  margin: 15px 0;
+  font-size: 0.95em;
+}

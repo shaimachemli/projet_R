@@ -1,0 +1,56 @@
+# _quarto.yml
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "Analyse Criminelle Los Angeles"
+  description: "Projet Data Science - Analyse des données criminelles de Los Angeles (2020-2025)"
+  site-url: https://votrenom.github.io/analyse-criminelle
+  navbar:
+    background: dark
+    search: true
+    right:
+      - text: "Présentation"
+        href: presentation.qmd
+      - text: "Code"
+        href: code.qmd
+      - text: "À propos"
+        href: about.qmd
+      - icon: github
+        href: https://github.com/votrenom
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+    toc-depth: 3
+  
+  revealjs:
+    theme: default
+    slide-number: true
+    preview-links: true
+    width: 1200
+    height: 700
+    footer: "Analyse Criminelle LA | Data Science Project"
+    transition: slide
+
+execute:
+  echo: true
+  warning: false
+  message: false
+  error: true
+  cache: true
+
+editor: visual
+
+filters:
+  - webr
+
+webr:
+  packages: ["tidyverse", "ggplot2", "dplyr", "lubridate", "scales", "gridExtra", "ggrepel", "zoo"]
+
+lang: fr
+
+keep-md: true

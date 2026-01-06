@@ -1,0 +1,135 @@
+[
+  {
+    "objectID": "presentation.html#introduction",
+    "href": "presentation.html#introduction",
+    "title": "Kids Screen Time Analysis",
+    "section": "Introduction",
+    "text": "Introduction\nContexte : L’usage des technologies numériques transforme profondément le quotidien des enfants, surtout dans les pays émergents.\nL’accès aux smartphones, tablettes et téléviseurs s’est fortement démocratisé ces 10 dernières années.\nEnjeux : Cette transition soulève des préoccupations de santé publique, notamment chez les enfants et adolescents, population particulièrement vulnérable aux effets d’une exposition prolongée aux écrans."
+  },
+  {
+    "objectID": "presentation.html#étude-et-objectifs",
+    "href": "presentation.html#étude-et-objectifs",
+    "title": "Kids Screen Time Analysis",
+    "section": "Étude et objectifs",
+    "text": "Étude et objectifs\n\nÉchantillon : 9 668 enfants indiens\nVariables clés :\n\nTemps d’écran quotidien\nType d’appareil utilisé\nIndicateurs de santé physique et comportementale\n\nObjectif : Fournir une analyse fondée sur les données pour éclairer :\n\nDécisions parentales\nStratégies éducatives\nPolitiques de santé publique"
+  },
+  {
+    "objectID": "presentation.html#problématique",
+    "href": "presentation.html#problématique",
+    "title": "Kids Screen Time Analysis",
+    "section": "Problématique",
+    "text": "Problématique\n\nDans quelle mesure l’utilisation des écrans influence-t-elle la santé des enfants, et quels facteurs peuvent moduler ces effets ?\n\nQuestions de recherche : - Combien de temps les enfants passent-ils sur les écrans ? - Quels appareils sont les plus utilisés ? - Quelles conséquences pour la santé ? - Existe-t-il des facteurs de protection ?"
+  },
+  {
+    "objectID": "presentation.html#données-aperçu-du-dataset",
+    "href": "presentation.html#données-aperçu-du-dataset",
+    "title": "Kids Screen Time Analysis",
+    "section": "Données & aperçu du dataset",
+    "text": "Données & aperçu du dataset\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "presentation.html#données-aperçu-du-dataset-1",
+    "href": "presentation.html#données-aperçu-du-dataset-1",
+    "title": "Kids Screen Time Analysis",
+    "section": "Données & aperçu du dataset",
+    "text": "Données & aperçu du dataset\n\nObservations : 9 668 enfants\nVariables : 12 (ex. âge, sexe, temps d’écran, appareil principal, activité physique)\nTypes : mix de numérique et catégoriel\nPréparation : valeurs manquantes traitées, variables harmonisées"
+  },
+  {
+    "objectID": "presentation.html#paired-t-test",
+    "href": "presentation.html#paired-t-test",
+    "title": "Kids Screen Time Analysis",
+    "section": "Paired t-test",
+    "text": "Paired t-test\nGiven is a number of students that passed an examination in statistics. The examination was written two times, one time before and one time after an additional series of lectures. The values represent the numbers of points approached during the examination. Check whether the additional lectures had any positive effect:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "presentation.html#wilcoxon-test-optional",
+    "href": "presentation.html#wilcoxon-test-optional",
+    "title": "Kids Screen Time Analysis",
+    "section": "Wilcoxon test (optional)",
+    "text": "Wilcoxon test (optional)\nThe Mann-Whitney and Wilxon tests are nonparametric tests of location. “Nonparametric” means, that the general location of the distributions is compared and not a parameter like the mean. This makes the test independent of distributional assumptions, but can sometimes lead to a vague interpretations."
+  },
+  {
+    "objectID": "presentation.html#own-project-weight-of-clementine-fruits",
+    "href": "presentation.html#own-project-weight-of-clementine-fruits",
+    "title": "Kids Screen Time Analysis",
+    "section": "Own project: Weight of Clementine fruits",
+    "text": "Own project: Weight of Clementine fruits\nImport the Clementines data set (fruits-2023-hse.csv)1.\n\nThink about an appropriate data structure and use a suitable statistical test to compare the weights.\nCheck variance homogeneity and normal distribution graphically.\nCan the weights from each brand be considered as independent samples?\n\nfruits.csv available from: https://tpetzoldt.github.io/datasets/data/fruits-2023-hse.csv"
+  },
+  {
+    "objectID": "presentation.html#chi-squared-test-and-fishers-exact-test-optional",
+    "href": "presentation.html#chi-squared-test-and-fishers-exact-test-optional",
+    "title": "Kids Screen Time Analysis",
+    "section": "Chi-squared test and Fisher’s exact test (optional)",
+    "text": "Chi-squared test and Fisher’s exact test (optional)\nIntroduction\nTaken from Agresti (2002), Fisher’s Tea Drinker:\n“A British woman claimed to be able to distinguish whether milk or tea was added to the cup first. To test, she was given 8 cups of tea, in four of which milk was added first. The null hypothesis is that there is no association between the true order of pouring and the woman’s guess, the alternative that there is a positive association (that the odds ratio is greater than 1).”"
+  },
+  {
+    "objectID": "presentation.html#exercise-solutions",
+    "href": "presentation.html#exercise-solutions",
+    "title": "Kids Screen Time Analysis",
+    "section": "Exercise Solutions",
+    "text": "Exercise Solutions"
+  },
+  {
+    "objectID": "presentation.html#references",
+    "href": "presentation.html#references",
+    "title": "Kids Screen Time Analysis",
+    "section": "References",
+    "text": "References\n\nStudent (1908) - The probable error of a mean\nDelacre et al. (2017) - Why psychologists should by default use Welch’s t-test instead of Student’s t-test"
+  },
+  {
+    "objectID": "presentation.html",
+    "href": "presentation.html",
+    "title": "Kids Screen Time Analysis: Data Management and Statistical Analysis",
+    "section": "",
+    "text": "Contexte : L’usage des technologies numériques transforme profondément le quotidien des enfants, surtout dans les pays émergents.\nL’accès aux smartphones, tablettes et téléviseurs s’est fortement démocratisé ces 10 dernières années.\nEnjeux : Cette transition soulève des préoccupations de santé publique, notamment chez les enfants et adolescents, population particulièrement vulnérable aux effets d’une exposition prolongée aux écrans."
+  },
+  {
+    "objectID": "presentation.html#données-aperçu-du-dataset-2",
+    "href": "presentation.html#données-aperçu-du-dataset-2",
+    "title": "Kids Screen Time Analysis",
+    "section": "Données & aperçu du dataset",
+    "text": "Données & aperçu du dataset\nThe two sample t-Test is used to compare two groups of data: Related to our example, we test the following hypotheses:\n\\(H_0\\): Both drugs have the same effect.\n\\(H_A\\): The drugs have a different effect, i.e. one of the drugs is stronger."
+  },
+  {
+    "objectID": "presentation.html#footnotes",
+    "href": "presentation.html#footnotes",
+    "title": "Kids Screen Time Analysis: Data Management and Statistical Analysis",
+    "section": "Notes de bas de page",
+    "text": "Notes de bas de page\n\n\nfruits.csv available from: https://tpetzoldt.github.io/datasets/data/fruits-2023-hse.csv↩︎"
+  },
+  {
+    "objectID": "presentation.html#exploration-des-données",
+    "href": "presentation.html#exploration-des-données",
+    "title": "Kids Screen Time Analysis: Data Management and Statistical Analysis",
+    "section": "Exploration des données",
+    "text": "Exploration des données\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "presentation.html#distribution-par-groupe-dâge",
+    "href": "presentation.html#distribution-par-groupe-dâge",
+    "title": "Kids Screen Time Analysis: Data Management and Statistical Analysis",
+    "section": "Distribution par groupe d’âge",
+    "text": "Distribution par groupe d’âge\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n💡 Les plus jeunes (8-10 ans) passent moins de temps sur les écrans, mais certains dépassent la limite.\n\n##Distribution par sexe, appareil et localisation\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nExercise 2: Create a boxplot, and perform the tests. What is the effect size, i.e. by how many hours differs sleep duration?\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "presentation.html#analyses-approfondies",
+    "href": "presentation.html#analyses-approfondies",
+    "title": "Kids Screen Time Analysis: Data Management and Statistical Analysis",
+    "section": "Analyses approfondies",
+    "text": "Analyses approfondies\n**Temps d’écran et santé\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "presentation.html#dépasser-4hjour-augmente-significativement-le-risque-dimpacts-santé.",
+    "href": "presentation.html#dépasser-4hjour-augmente-significativement-le-risque-dimpacts-santé.",
+    "title": "Kids Screen Time Analysis: Data Management and Statistical Analysis",
+    "section": "💡 Dépasser 4h/jour augmente significativement le risque d’impacts santé.",
+    "text": "💡 Dépasser 4h/jour augmente significativement le risque d’impacts santé.\nAppareil et impacts santé\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n💡 Le smartphone est l’appareil le plus associé aux problèmes de santé.\n**Profils à risque et sains\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "presentation.html#méthodologie",
+    "href": "presentation.html#méthodologie",
+    "title": "Kids Screen Time Analysis",
+    "section": "2. Méthodologie",
+    "text": "2. Méthodologie\nLe workflow général suivi est le suivant :\ngraph TD\nA[Dataset brut : Screen Time CSV] --&gt; B[Nettoyage & Prétraitement]\nB --&gt; C[Création de variables : Age_Group, Screen_Category, Education_Level, Has_Health_Impact]\nC --&gt; D[Analyses descriptives : globales et par sous-groupes]\nD --&gt; E[Analyses approfondies : impacts santé, appareil, âge, localisation]\nE --&gt; F[Résultats synthétiques et recommandations]\n\nstyle A fill:#e1f5fe\nstyle B fill:#f3e5f5\nstyle C fill:#e8f5e8\nstyle D fill:#fff3e0\nstyle E fill:#fce4ec\nstyle F fill:#e8f5e8,stroke:#333\n\n\n## Introduction\n\n**Contexte :** L’usage des technologies numériques transforme profondément le quotidien des enfants, surtout dans les pays émergents.  \nL’accès aux smartphones, tablettes et téléviseurs s’est fortement démocratisé ces 10 dernières années.\n\n**Enjeux :** Cette transition soulève des préoccupations de santé publique, notamment chez les enfants et adolescents, population particulièrement vulnérable aux effets d’une **exposition prolongée aux écrans**.\n\n---\n\n## Étude et objectifs\n\n- **Échantillon :** 9 668 enfants indiens\n- **Variables clés :**\n  - Temps d’écran quotidien\n  - Type d’appareil utilisé\n  - Indicateurs de santé physique et comportementale\n- **Objectif :** Fournir une analyse fondée sur les données pour éclairer :\n  - Décisions parentales\n  - Stratégies éducatives\n  - Politiques de santé publique\n\n---\n\n## Problématique\n\n&gt; Dans quelle mesure l’utilisation des écrans influence-t-elle la santé des enfants, et quels facteurs peuvent moduler ces effets ?\n\n**Questions de recherche :**\n- Combien de temps les enfants passent-ils sur les écrans ?\n- Quels appareils sont les plus utilisés ?\n- Quelles conséquences pour la santé ?\n- Existe-t-il des facteurs de protection ?\n\n---\n\n\n## Données & aperçu du dataset\n\n\n\n\n```{webr-r}\nurl &lt;- \"https://raw.githubusercontent.com/shaimachemli/projet_R/refs/heads/main/data/screen_time_clean.csv\"\ndata &lt;- read.csv(url)\ndim(data) # lignes / colonnes\nsummary(data) # résumé des variables numériques\nstr(data) # structure"
+  }
+]
